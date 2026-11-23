@@ -1,0 +1,67 @@
+html.home-motion-page { scroll-behavior: smooth; }
+.home-redesign .home-hero-art img {
+  translate: var(--hero-x, 0px) var(--hero-y, 0px);
+  transition: translate 650ms cubic-bezier(.2,.7,.2,1);
+}
+.home-redesign .craft-card {
+  --card-x: 50%; --card-y: 50%;
+  isolation: isolate;
+  transition: transform 450ms cubic-bezier(.2,.7,.2,1), background-color 400ms, border-color 400ms, filter 400ms;
+}
+.home-redesign .craft-card::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  pointer-events: none; opacity: 0;
+  background: radial-gradient(circle at var(--card-x) var(--card-y), #fff7d9a6, #ebddae24 35%, transparent 68%);
+  transition: opacity 400ms ease;
+}
+.home-redesign .craft-card .craft-art {
+  transform-origin: center 65%;
+  transition: transform 650ms cubic-bezier(.2,.7,.2,1);
+}
+.home-redesign .craft-card .enter { transition: background-color 350ms, box-shadow 350ms; }
+.home-redesign .craft-card .enter span:last-child,
+.home-redesign .explore-button > span { display: inline-block; transition: transform 350ms ease; }
+.home-redesign .craft-card:focus-visible::before { opacity: .7; }
+.home-redesign .craft-card:focus-visible .enter span:last-child { transform: translateX(4px); }
+.home-redesign .explore-button {
+  position: relative; overflow: hidden;
+  transition: transform 350ms cubic-bezier(.2,.7,.2,1), box-shadow 350ms, filter 350ms;
+}
+.home-redesign .explore-button::after {
+  content: ''; position: absolute; top: -30%; bottom: -30%; left: -70%; width: 45%;
+  transform: skewX(-20deg); pointer-events: none;
+  background: linear-gradient(90deg, transparent, #fff8dc40, transparent);
+}
+.home-redesign .explore-button:focus-visible > span { transform: translateX(4px); }
+@media (hover: hover) and (pointer: fine) {
+  .home-redesign .craft-card:hover {
+    transform: perspective(1000px) translateY(-6px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    background-color: #dbe5cf; border-color: #397b59; filter: none;
+  }
+  .home-redesign .craft-card:hover::before { opacity: 1; }
+  .home-redesign .craft-card:hover .craft-art { transform: translateY(-3px) scale(1.035); }
+  .home-redesign .craft-card:hover .enter { box-shadow: 0 3px 12px #395d3824; }
+  .home-redesign .craft-card:hover .enter span:last-child { transform: translateX(4px); }
+  .home-redesign .explore-button:hover { transform: translateY(-3px); box-shadow: 0 7px 20px #395d3826; }
+  .home-redesign .explore-button:hover > span { transform: translateX(4px); }
+  .home-redesign .explore-button:hover::after { animation: home-button-light 850ms ease both; }
+}
+@media (hover: none) {
+  .home-redesign .craft-card:hover { transform: none; }
+}
+.home-redesign .craft-card:active { transform: translateY(-1px) scale(.995); transition-duration: 120ms; }
+.home-redesign .explore-button:active { transform: translateY(0); transition-duration: 120ms; }
+@keyframes home-button-light { to { left: 140%; } }
+@media (prefers-reduced-motion: reduce) {
+  html.home-motion-page { scroll-behavior: auto; }
+  .home-redesign .home-hero-art img { translate: none !important; }
+  .home-redesign .craft-card, .home-redesign .craft-art,
+  .home-redesign .craft-card .enter span, .home-redesign .explore-button,
+  .home-redesign .explore-button > span { transform: none !important; }
+  .home-redesign .craft-card, .home-redesign .craft-card::before,
+  .home-redesign .craft-art, .home-redesign .enter, .home-redesign .enter span,
+  .home-redesign .home-hero-art img, .home-redesign .explore-button,
+  .home-redesign .explore-button::after, .home-redesign .explore-button > span {
+    animation: none !important; transition: none !important;
+  }
+}

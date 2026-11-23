@@ -1,0 +1,19 @@
+.embroidery-work-page .stitch-tools{padding:16px 20px;color:#527d68;font-size:14px}
+#thread-colors{display:flex;justify-content:space-between;gap:5px;flex-wrap:wrap}
+#thread-colors .swatch{width:28px;height:28px}
+#thread-color-label{margin:10px 0;font-size:13px}
+.stitch-methods{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.stitch-methods button{background:#f4f0e7;border:1px solid transparent;border-radius:6px;color:#527d68;padding:8px}
+.stitch-methods button[aria-pressed=true]{border-color:#489582;background:#e5f0e7}
+.thread-sample{display:block;height:30px;margin:0 0 5px;background:repeating-linear-gradient(125deg,transparent 0 5px,#c87563 5px 7px,#f4b1a1 7px 9px,transparent 9px 13px)}
+.thread-sample.varied{clip-path:polygon(0 10%,15% 30%,30% 0,45% 30%,60% 0,75% 30%,100% 0,100% 90%,85% 70%,70% 100%,55% 70%,40% 100%,25% 70%,0 100%)}
+.stitch-tools label{display:flex;justify-content:space-between}.stitch-tools input{width:100%;accent-color:#489582;margin:10px 0}
+.stitch-actions{display:flex;gap:10px}.stitch-actions button{border:1px solid #a7c7b7;background:#f3f7ed;color:#487e69;padding:6px 10px;border-radius:3px}
+.stitch-help{font-size:12px;line-height:1.6;margin-top:10px}
+.embroidery-work-page .paper{display:flex;justify-content:center;align-items:center}
+.embroidery-surface{position:relative;height:100%;max-height:510px;max-width:100%;aspect-ratio:1;flex:none;min-width:0;min-height:0}
+#embroidery-canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair;outline-offset:-3px}
+#needle-cursor{position:absolute;width:22px;height:22px;border:1px solid #468873;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;background:#ffffff33}
+#needle-cursor:after{content:"";position:absolute;left:15px;top:-8px;height:28px;width:2px;background:linear-gradient(90deg,#fff,#466054);transform:rotate(35deg);box-shadow:1px 0 1px #385d4c44}
+#loading{position:absolute;inset:0;display:grid;place-items:center;background:#faf7e9db;text-align:center;padding:20px;pointer-events:none}
+@media(max-width:620px){.embroidery-work-page .stitch-tools{padding:14px}.stitch-methods{margin:10px 0}.embroidery-surface{width:100%;height:auto;max-height:100%}}

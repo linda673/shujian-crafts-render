@@ -1,0 +1,21 @@
+.paper-cutting-page{background-image:var(--left-bg,none),var(--right-bg,none);background-position:left bottom,right bottom;background-size:auto 66%,auto 50%;background-repeat:no-repeat;min-height:100vh}
+.paper-cutting-page header{padding:30px 4.6% 56px;grid-template-columns:350px 1fr 380px;min-height:215px}
+.paper-cutting-page .brand h1{font-size:76px;letter-spacing:0;line-height:1.25}.paper-cutting-page .brand p{white-space:nowrap}
+.paper-cutting-page .experience-breadcrumb{position:absolute;top:170px;left:6.15%;margin:0;font-size:12px;opacity:.8}
+.paper-cutting-page main{grid-template-columns:20.7% minmax(0,1fr) 20.7%;gap:3.2%}
+.paper-cutting-page .steps{padding-top:12px;padding-bottom:12px}.paper-cutting-page .steps button{padding-bottom:12px}.paper-cutting-page .steps li:last-child button{padding-bottom:0}.paper-cutting-page .steps small{max-width:225px;min-height:43px}
+.paper-cutting-page .left{gap:35px}.paper-cutting-page .pattern-panel{min-height:295px}
+.paper-cutting-page .patterns{padding:22px 11% 18px;gap:6px 18px}
+.paper-cutting-page .pattern{border:1px solid transparent;background:transparent;font-size:13px;color:#507e69;padding:0 0 2px}
+.paper-cutting-page .thumb{background:#f4f0e6;border-radius:7px;height:80px;padding:10px;margin-bottom:5px}.paper-cutting-page .thumb img{height:60px;width:100%}
+.paper-cutting-page .pattern[aria-pressed=true]{border-color:#91bba7;background:#e6f1e8;padding:0 0 2px;border-radius:7px}
+.paper-cutting-page .paper{aspect-ratio:1.5;padding:40px}.paper-cutting-page #pattern-image{width:61%;height:100%;max-height:470px;justify-self:center}
+.paper-cutting-page .corner.has-image{width:18%;aspect-ratio:1}.paper-cutting-page .mirror-example{transform:scaleX(-1)}
+.paper-cutting-page .reference-art{margin-top:42px;aspect-ratio:1/.98;padding:7px}.paper-cutting-page .caption{margin-top:26px}
+.paper-cutting-page .description{margin:36px 0 52px;white-space:nowrap;font-size:19px}.paper-cutting-page .reference>.primary{margin-top:0}
+.paper-cutting-page footer{margin-top:35px}.paper-cutting-page #step-status{font-size:12px;min-height:20px}
+.paper-cutting-page a:focus-visible{outline:3px solid #b97442;outline-offset:4px}
+@media(min-width:1600px){.paper-cutting-page .paper{height:550px;aspect-ratio:auto}.paper-cutting-page .reference-art{height:350px;margin-top:42px}.paper-cutting-page .description{margin-top:36px;margin-bottom:52px}.paper-cutting-page .reference>.primary{margin-top:0}.paper-cutting-page footer{margin-top:35px}.paper-cutting-page #pattern-image{width:64%}}
+@media(max-width:1250px){.paper-cutting-page header{grid-template-columns:280px 1fr 280px;gap:25px}.paper-cutting-page .brand h1{font-size:58px}.paper-cutting-page main{grid-template-columns:24% minmax(0,1fr) 23%;gap:2%}.paper-cutting-page .patterns{padding:16px 10px;gap:9px}.paper-cutting-page .paper{padding:20px;aspect-ratio:1.1}.paper-cutting-page #pattern-image{width:95%}.paper-cutting-page .description{white-space:normal;font-size:16px}.paper-cutting-page .experience-breadcrumb{left:4%}}
+@media(max-width:900px){.paper-cutting-page header{grid-template-columns:1fr auto;min-height:180px;padding-bottom:40px}.paper-cutting-page .experience-breadcrumb{position:static;margin:-20px auto 30px}.paper-cutting-page main{grid-template-columns:240px minmax(0,1fr);gap:22px}.paper-cutting-page .reference-art{margin:0;aspect-ratio:1}.paper-cutting-page .caption,.paper-cutting-page .description{margin:0}.paper-cutting-page .paper{padding:15px}}
+@media(max-width:620px){.paper-cutting-page header{padding:25px 6% 35px}.paper-cutting-page .brand h1{font-size:54px}.paper-cutting-page main{display:flex;gap:32px}.paper-cutting-page .steps small{min-height:0}.paper-cutting-page .pattern-panel{min-height:0}.paper-cutting-page .patterns{grid-template-columns:repeat(3,1fr);padding:15px 20px}.paper-cutting-page .thumb{height:64px}.paper-cutting-page .thumb img{height:46px}.paper-cutting-page .reference-art{padding:0}.paper-cutting-page .description{font-size:14px}.paper-cutting-page .reference>.primary{font-size:18px}.paper-cutting-page #pattern-image{width:90%}}

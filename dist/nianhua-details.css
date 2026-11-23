@@ -1,0 +1,42 @@
+#color-study { --content: min(88%, 1520px); }
+#print-details {
+  --section-space: clamp(40px, 5.4vw, 82px);
+  --gutter: clamp(20px, 6vw, 100px);
+  --reading-width: 1200px;
+  --heading-size: clamp(28px, 3vw, 46px);
+}
+.print-map { position: relative; width: min(100%, 150px); }
+.print-map img { width: 100%; height: auto; }
+.print-ring {
+  position: absolute;
+  left: var(--pin-x);
+  top: var(--pin-y);
+  width: 16%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff9e9;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #3b4435, inset 0 0 0 1px #3b4435;
+}
+#print-details:has(#focus-peony:checked) { --pin-x: 62%; --pin-y: 69%; }
+#print-details:has(#focus-feather:checked) { --pin-x: 54%; --pin-y: 29%; }
+#print-details:has(#focus-leaf:checked) { --pin-x: 22%; --pin-y: 34%; }
+#print-details:has(#focus-peony:checked) .detail-peony,
+#print-details:has(#focus-feather:checked) .detail-feather,
+#print-details:has(#focus-leaf:checked) .detail-leaf { display: block; }
+.print-proof {
+  max-width: var(--reading-width);
+  margin: 1.35rem auto 0;
+  border-block-end: 1px solid #c6cebd;
+}
+.print-proof summary { width: fit-content; cursor: pointer; padding: .7em 0; }
+.print-proof summary:focus-visible { outline: 2px solid #a67a42; }
+.print-proof > div { display: flex; justify-content: center; gap: clamp(12px, 3vw, 40px); padding-block: 1rem; }
+.print-proof figure { width: min(42%, 280px); text-align: center; }
+.print-proof img { width: 100%; aspect-ratio: .9; object-fit: contain; }
+.print-proof figcaption { margin-top: .5em; }
+@media (max-width: 680px) {
+  #color-study .pc-banner { object-position: 80% center; }
+  #color-study .pc-banner-copy p { max-width: 13em; }
+  .print-map { width: min(100%, 105px); }
+}

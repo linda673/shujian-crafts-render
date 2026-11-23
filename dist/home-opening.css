@@ -1,0 +1,50 @@
+/* A short silk-and-paper overture, independent of the homepage layout. */
+#home-opening {
+  position: fixed; inset: 0; z-index: 1000;
+  display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 42%, #fffdf5 0%, #f5f1e6 54%, #e3ece1 100%);
+  color: #356d56; isolation: isolate;
+  transition: opacity 650ms ease, visibility 650ms;
+}
+#home-opening[hidden] { display: none; }
+#home-opening.is-leaving { opacity: 0; visibility: hidden; pointer-events: none; }
+.opening-grain {
+  position: absolute; inset: 0; opacity: .14; pointer-events: none;
+  background: url('assets/maliu-pages/embroidery/intro/page-bg.webp') center / cover;
+}
+.opening-sun {
+  position: absolute; width: clamp(160px, 23vw, 320px); aspect-ratio: 1;
+  top: 50%; left: 50%; border-radius: 50%;
+  background: linear-gradient(145deg, #f2bd9f99, #e6d8af22);
+  transform: translate(-50%, -72%);
+  animation: opening-sun 1700ms cubic-bezier(.2,.7,.2,1) both;
+}
+.opening-silk { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.opening-silk path {
+  fill: none; stroke: #86aa91; stroke-width: 1; opacity: .55;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  animation: opening-thread 2100ms cubic-bezier(.3,.1,.15,1) forwards;
+}
+.opening-silk path:nth-child(2) { stroke: #c3a169; animation-delay: 100ms; }
+.opening-silk path:nth-child(3) { animation-delay: 180ms; }
+.opening-silk path:nth-child(4) { stroke: #c3a169; animation-delay: 250ms; }
+.opening-silk path:nth-child(5) { animation-delay: 320ms; }
+.opening-copy { position: relative; text-align: center; padding: 24px; }
+.opening-eyebrow { font-size: 13px; letter-spacing: .4em; margin: 0 0 22px; color: #829079; }
+.opening-title { display: flex; justify-content: center; gap: .16em; margin: 0; font-family: 'STZhongsong','华文中宋',serif; font-size: clamp(44px, 7vw, 94px); font-weight: 500; line-height: 1.4; }
+.opening-title span { animation: opening-letter 950ms cubic-bezier(.2,.7,.2,1) both; }
+.opening-title span:nth-child(2) { animation-delay: 130ms; }
+.opening-title span:nth-child(3) { animation-delay: 260ms; }
+.opening-title span:nth-child(4) { animation-delay: 390ms; }
+.opening-subtitle { margin: 22px 0 0; font-size: clamp(14px, 1.5vw, 19px); letter-spacing: .18em; animation: opening-letter 1100ms 550ms both; }
+.opening-rule { width: 130px; height: 1px; background: #c2aa7c; margin: 28px auto 0; transform-origin: center; animation: opening-rule 1600ms 300ms both; }
+.opening-footer { position: absolute; bottom: max(30px, env(safe-area-inset-bottom)); left: 24px; right: 24px; text-align: center; color: #7a8d7d; font-size: 12px; letter-spacing: .2em; }
+.opening-skip { position: absolute; top: max(24px, env(safe-area-inset-top)); right: max(24px, env(safe-area-inset-right)); border: 1px solid #8baa9170; border-radius: 24px; background: #fffaf0; padding: 10px 18px; color: #527563; font: inherit; font-size: 14px; cursor: pointer; }
+.opening-skip:hover { background: #e5eddf; }
+.opening-skip:focus-visible { outline: 3px solid #b5925d; outline-offset: 4px; }
+@keyframes opening-letter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes opening-thread { to { stroke-dashoffset: 0; } }
+@keyframes opening-sun { from { opacity: 0; transform: translate(-50%, -64%) scale(.84); } to { opacity: 1; transform: translate(-50%, -72%) scale(1); } }
+@keyframes opening-rule { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
+@media (max-width: 600px) { .opening-silk { width: 180%; max-width: none; left: -40%; } .opening-footer { letter-spacing: .1em; } }
+@media (prefers-reduced-motion: reduce) { #home-opening { display: none !important; } #home-opening, #home-opening * { animation: none !important; transition: none !important; } }

@@ -1,0 +1,134 @@
+/* Homepage composition based on the approved five-craft preview. */
+body.home-redesign {
+  --home-ink: #174e3c;
+  --home-line: #86a48d;
+  color: var(--home-ink);
+  /* Preserve the background artwork ratio at every page height. */
+  background: #faf6eb url("assets/maliu-pages/embroidery/intro/page-bg.webp") center top / cover no-repeat;
+  min-height: 100svh;
+  overflow-x: clip;
+}
+.home-redesign .home-header,
+.home-redesign .home-main,
+.home-redesign .home-footer {
+  width: min(94%, 1840px);
+  max-width: none;
+  margin-inline: auto;
+}
+.home-redesign .home-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2%;
+  min-height: clamp(100px, 7.8vw, 150px);
+  padding: 0;
+  border-bottom: 1px solid var(--home-line);
+}
+.home-redesign .home-brand { width: 100%; height: 75px; }
+:root body.home-redesign > .shared-site-brand {
+  --site-brand-width: clamp(260px, 24vw, 455px);
+  left: max(1.5vw, calc((100vw - 1880px) / 2));
+  top: 0;
+}
+
+
+.home-redesign .illustration-crop { display: block; position: relative; overflow: hidden; pointer-events: none; }
+.home-redesign .illustration-crop img { position: absolute; display: block; max-width: none; height: auto; }
+/* Reuse only the artwork regions; headings, links and descriptions are live HTML. */
+.home-redesign .home-main { padding: 12px 0 52px; }
+.home-redesign .home-hero { position: relative; min-height: clamp(350px, 28.7vw, 555px); display: flex; align-items: center; }
+.home-redesign .intro { position: relative; z-index: 1; width: 41%; max-width: none; margin: 0; padding: 12px 0 24px 1%; }
+.home-redesign .eyebrow { color: var(--home-ink); font-size: clamp(16px, 1.45vw, 25px); font-weight: 500; letter-spacing: .14em; margin-bottom: clamp(18px, 1.7vw, 32px); }
+.home-redesign .intro h1 { font-size: clamp(38px, 4.15vw, 78px); font-weight: 600; line-height: 1.3; letter-spacing: 0; margin-bottom: 16px; white-space: nowrap; }
+.home-redesign .intro > p { font-size: clamp(16px, 1.55vw, 28px); line-height: 1.65; }
+.home-redesign .intro > .eyebrow { font-size: clamp(16px, 1.45vw, 25px); }
+.home-redesign .home-hero-art { position: absolute; right: -3.2%; width: 71%; aspect-ratio: 968 / 400; mix-blend-mode: normal; mask-image: none; }
+.home-redesign .home-hero-art img { inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.home-redesign .explore-button { display: inline-flex; align-items: center; gap: 22px; margin-top: 24px; padding: 10px 28px; border: 1px solid #649778; border-radius: 9px; background: linear-gradient(#3c7856, #20553e); color: #fff9e9; text-decoration: none; font-size: clamp(20px, 1.85vw, 32px); box-shadow: inset 0 0 0 2px #fff8db22; transition: filter .2s; }
+.home-redesign .explore-button:hover { filter: brightness(1.12); }
+.home-redesign .craft-heading { display: flex; align-items: center; gap: 28px; margin: 18px 0 32px; }
+.home-redesign .craft-heading h2 { font-size: clamp(30px, 3.1vw, 54px); font-weight: 600; white-space: nowrap; }
+.home-redesign .craft-heading > span { flex: 1; height: 1px; background: var(--home-line); }
+.home-redesign .craft-heading p { font-size: clamp(16px, 1.4vw, 25px); }
+.home-redesign .craft-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(14px, 1.3vw, 26px); scroll-margin-top: 26px; }
+.home-redesign .craft-card {
+  min-width: 0;
+  min-height: 0;
+  padding: 12px 9px 22px;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #fbf5e7cf, #e7eddf66 65%, #fcf4e5bb);
+  border: 1px solid #739276;
+  outline: 1px solid #9bb198;
+  outline-offset: -6px;
+  clip-path: polygon(0 10px, 5px 10px, 5px 5px, 10px 5px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 5px, calc(100% - 5px) 5px, calc(100% - 5px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 5px) calc(100% - 10px), calc(100% - 5px) calc(100% - 5px), calc(100% - 10px) calc(100% - 5px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 5px), 5px calc(100% - 5px), 5px calc(100% - 10px), 0 calc(100% - 10px));
+  transition: transform .25s ease, background-color .25s ease, filter .25s ease;
+}
+.home-redesign .craft-art {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 244 / 204;
+  margin-bottom: 8px;
+  mix-blend-mode: multiply;
+}
+.home-redesign .craft-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+}
+.home-redesign .craft-hero-nianhua {
+  display: block;
+  width: 100%;
+  background-image: url("assets/nianhua-intro/reference.webp");
+  background-repeat: no-repeat;
+  background-size:163.710778% 220.588235%; background-position:91.862955% 27.100271%; aspect-ratio:733 / 306;
+}
+.home-redesign .craft-card h2 { color: var(--home-ink); font-size: clamp(19px, 1.9vw, 34px); line-height: 1.4; font-weight: 600; margin: 0 0 8px; white-space: nowrap; }
+.home-redesign .craft-card p { color: #294c3b; font-size: clamp(13px, 1.13vw, 20px); line-height: 1.7; margin: 0 0 20px; }
+.home-redesign .craft-card .enter { justify-content: center; gap: 12px; padding: 4px 20px; color: #fff9e9; background: linear-gradient(#4e805c, #356b4e); border: 1px solid #ad9762; outline: 1px solid #ffffff44; outline-offset: -4px; border-radius: 7px; font-size: clamp(16px, 1.4vw, 24px); }
+.home-redesign .craft-card:hover { transform: translateY(-5px); background-color: #ccd9bf; filter: brightness(.96); box-shadow: none; }
+.home-redesign .craft-card:focus-visible { outline: 3px solid #2d7555; outline-offset: -3px; background-color: #d9e4ce; }
+.home-redesign .home-footer { padding: 16px 0 24px; border-top: 1px solid var(--home-line); color: var(--home-ink); font-size: clamp(16px, 1.3vw, 23px); }
+.home-redesign .latest-work { margin-top: 44px; background: #faf6ebeb; }
+@media (max-width: 1100px) {
+
+  .home-redesign .home-hero { min-height: 330px; }
+  .home-redesign .intro h1 { font-size: 4.2vw; }
+  .home-redesign .craft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .home-redesign .craft-card h2 { font-size: 25px; }
+  .home-redesign .craft-card p { font-size: 16px; }
+}
+@media (max-width: 760px) {
+  :root body.home-redesign > .shared-site-brand { --site-brand-width: 250px; top: 0; left: calc((100vw - 250px) / 2); }
+  :root .home-redesign .home-header { display: flex; justify-content: center; min-height: 0; padding: 88px 0 10px; }
+  .home-redesign .home-brand { display: none; }
+
+  .home-redesign .home-hero { display: flex; flex-direction: column; min-height: 0; padding-top: 28px; }
+  .home-redesign .intro { width: 100%; padding: 0 3%; }
+  .home-redesign .intro h1 { font-size: clamp(32px, 6.6vw, 48px); }
+  .home-redesign .intro > p { font-size: 17px; }
+  .home-redesign .eyebrow { margin-bottom: 12px; }
+  .home-redesign .explore-button { margin-top: 20px; padding: 9px 22px; font-size: 21px; }
+  .home-redesign .home-hero-art { position: relative; right: auto; width: 105%; margin-top: 12px; }
+  .home-redesign .craft-heading { gap: 15px; margin: 24px 0; }
+  .home-redesign .craft-heading h2 { font-size: 30px; }
+  .home-redesign .craft-heading p { display: none; }
+  .home-redesign .craft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .home-redesign .craft-card { padding: 9px 7px 17px; }
+  .home-redesign .craft-card h2 { font-size: clamp(18px, 3.5vw, 25px); }
+  .home-redesign .craft-card p { font-size: 14px; margin-bottom: 14px; }
+  .home-redesign .craft-card .enter { padding: 5px 13px; font-size: 17px; }
+  .home-redesign .home-footer { flex-direction: row; font-size: 14px; }
+}
+@media (max-width: 380px) {
+  .home-redesign .craft-grid { grid-template-columns: 1fr; }
+  .home-redesign .craft-card h2 { font-size: 25px; }
+  .home-redesign .craft-card p { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-redesign .craft-card, .home-redesign .explore-button { transition: none; }
+  .home-redesign .craft-card:hover { transform: none; }
+}

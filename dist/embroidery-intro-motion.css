@@ -1,0 +1,65 @@
+/* The same darker hover treatment applies to all three story cards. */
+@media (hover: hover) and (pointer: fine) {
+  .maliu-intro .story-card:hover {
+    filter: brightness(.93) saturate(1.05) drop-shadow(0 6px 5px #394a3420);
+  }
+}
+
+/* Match the papercutting introduction's entrance rhythm without changing layout. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes embroidery-rise {
+    from { opacity:0; translate:0 18px; }
+    to { opacity:1; translate:0 0; }
+  }
+  @keyframes embroidery-unfold {
+    from { opacity:0; transform:perspective(950px) rotateY(-24deg) rotate(-4deg) scale(.88); }
+    65% { opacity:1; }
+    to { opacity:1; transform:none; }
+  }
+  @keyframes embroidery-line {
+    from { scale:0 1; }
+    to { scale:1 1; }
+  }
+  .maliu-intro .hero h1 {
+    animation:embroidery-rise .65s cubic-bezier(.2,.75,.25,1) .08s backwards;
+  }
+  .maliu-intro .hero-description {
+    animation:embroidery-rise .65s cubic-bezier(.2,.75,.25,1) .32s backwards;
+  }
+  .maliu-intro .topic-tags {
+    animation:embroidery-rise .65s cubic-bezier(.2,.75,.25,1) .4s backwards;
+  }
+  .maliu-intro .hero-art {
+    transform-origin:center;
+    animation:embroidery-unfold 1.15s cubic-bezier(.18,.76,.22,1) .14s backwards;
+  }
+  .maliu-intro .section-heading.in-view .heading-line {
+    transform-origin:left;
+    animation:embroidery-line .85s ease-out backwards;
+  }
+  .maliu-intro .story-card.in-view {
+    animation:embroidery-rise .68s cubic-bezier(.16,.8,.28,1) var(--card-delay,0s) backwards;
+  }
+  .maliu-intro .story-card:nth-child(2) { --card-delay:.1s; }
+  .maliu-intro .story-card:nth-child(3) { --card-delay:.2s; }
+  .maliu-intro .story-card, .maliu-intro .card-art {
+    transition:transform .32s cubic-bezier(.2,.7,.2,1),filter .32s ease-out;
+  }
+  .maliu-intro .card-art { --tilt:-3deg; }
+  .maliu-intro .story-card:nth-child(2) .card-art { --tilt:2deg; }
+  .maliu-intro .story-card:focus-visible .card-art {
+    transform:translateY(-50%) rotate(var(--tilt)) scale(1.035);
+  }
+  @media (hover:hover) and (pointer:fine) {
+    .maliu-intro .story-card:hover { transform:translateY(-6px); }
+    .maliu-intro .story-card:hover .card-art { transform:translateY(-50%) rotate(var(--tilt)) scale(1.035); }
+  }
+  @container (max-width:820px) { .maliu-intro .story-card.in-view { --card-delay:0s; } }
+  .maliu-intro .credits[open] > div {
+    animation:embroidery-rise .26s ease-out backwards;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .maliu-intro .story-card:hover { transform:none; }
+}

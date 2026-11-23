@@ -1,0 +1,26 @@
+/* Indicate the current craft section using the navigation's semantic state. */
+:root .shared-craft-nav.embroidery-section-nav > a[aria-current="page"] {
+  color: #236e60;
+}
+:root .shared-craft-nav.embroidery-section-nav > a[aria-current="page"] .craft-nav-icon {
+  opacity: 1;
+  filter: brightness(1.08) saturate(1.15) drop-shadow(0 2px 5px #4f958b30);
+}
+:root .shared-craft-nav.embroidery-section-nav > a:not([aria-current="page"]) {
+  color: #7b8982;
+}
+:root .shared-craft-nav.embroidery-section-nav > a:not([aria-current="page"]) .craft-nav-icon {
+  opacity: .65;
+  filter: brightness(.8) saturate(.5);
+}
+:root .shared-craft-nav.embroidery-section-nav > a:not([aria-current="page"]) .craft-nav-label::before {
+  opacity: .45;
+}
+
+/* Reserve content space while using the shared navigation position. */
+:root body:has(> .embroidery-gift-nav) {
+  padding-top: calc(clamp(24px, 2.2vw, 56px) + var(--craft-nav-height));
+}
+@media (max-width: 760px) {
+  :root body:has(> .embroidery-gift-nav) { padding-top: 128px; }
+}

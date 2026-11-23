@@ -1,0 +1,75 @@
+/* Use the same page grid and breakpoints as nianhua.html / style.css. */
+.paper-cutting-page main {
+  width: 87.7%; margin: auto; display: grid;
+  grid-template-columns: 20.7% minmax(0, 1fr) 20.7%;
+  gap: 3.5%; align-items: start;
+}
+.paper-cutting-page main > * { min-width: 0; }
+.paper-cutting-page .fold-left { display: grid; gap: 35px; }
+.paper-cutting-page .fold-panel { margin: 0; }
+.paper-cutting-page .fold-work { width: 100%; }
+.paper-cutting-page .fold-board {
+  position: relative; aspect-ratio: 1.5; min-height: 0;
+  padding: 25px; background-color: #fcfaf4;
+}
+.paper-cutting-page .fold-board canvas {
+  position: absolute; inset: 0; margin: auto;
+  height: calc(100% - 50px); width: auto;
+  max-width: calc(100% - 50px); max-height: none;
+  aspect-ratio: 1; object-fit: fill;
+}
+.paper-cutting-page .fold-reference {
+  display: block; grid-column: auto; padding: 0;
+  background: transparent; text-align: center;
+}
+.paper-cutting-page .fold-reference h2 {
+  margin: 7px 0 0; padding: 8px; border: 1px solid var(--line);
+  font-size: 25px; font-weight: normal;
+  background: linear-gradient(110deg, #e7af8c, #d4e1d5); color: #4b9482;
+}
+.paper-cutting-page .fold-reference > img {
+  display: block; width: 100%; max-width: none;
+  aspect-ratio: 1 / 1.13; margin: 32px 0 0; object-fit: contain;
+}
+.paper-cutting-page .fold-reference h3 {
+  font-size: 18px; font-weight: normal; padding: 0;
+  border: 0; margin-top: 10px;
+}
+.paper-cutting-page #reference-description {
+  font-size: 20px; line-height: 1.8; margin: 38px 0 48px; min-height: 0;
+}
+.paper-cutting-page .fold-reference > .primary {
+  display: block; width: 76%; margin: auto; padding: 16px 25px;
+}
+.paper-cutting-page .fold-reference > p:has(#download) { min-height: 0; margin: 12px 0; }
+.paper-cutting-page .fold-reference > p:has(#download[hidden]) { display: none; }
+.paper-cutting-page #again { margin-top: 12px; }
+@media (max-width: 1250px) {
+  .paper-cutting-page main { width: 92%; grid-template-columns: 24% minmax(0, 1fr) 23%; gap: 2%; }
+  .paper-cutting-page .fold-board { aspect-ratio: 1.1; padding: 15px; }
+  .paper-cutting-page .fold-board canvas { height: calc(100% - 30px); max-width: calc(100% - 30px); }
+  .paper-cutting-page .fold-reference > img { margin-top: 20px; }
+  .paper-cutting-page #reference-description { font-size: 17px; }
+  .paper-cutting-page .fold-reference > .primary { width: 90%; font-size: 21px; }
+  .paper-cutting-page .fold-heading { padding: 12px; font-size: 20px; gap: 8px; flex-wrap: wrap; }
+}
+@media (max-width: 900px) {
+  .paper-cutting-page main { grid-template-columns: 240px minmax(0, 1fr); gap: 22px; }
+  .paper-cutting-page .fold-board { aspect-ratio: 1.05; }
+  .paper-cutting-page .fold-reference {
+    grid-column: 2; display: grid;
+    grid-template-columns: 150px minmax(0, 1fr); gap: 10px 20px; align-items: center;
+  }
+  .paper-cutting-page .fold-reference h2 { grid-column: 1 / -1; }
+  .paper-cutting-page .fold-reference > img { grid-column: 1; grid-row: 2 / 5; margin: 0; aspect-ratio: 1; }
+  .paper-cutting-page .fold-reference h3,
+  .paper-cutting-page #reference-description { margin: 0; font-size: 16px; }
+  .paper-cutting-page .fold-reference > .primary { grid-column: 2; width: 100%; padding: 12px; font-size: 18px; }
+}
+@media (max-width: 620px) {
+  .paper-cutting-page main { width: 88%; margin: auto; display: flex; flex-direction: column; gap: 30px; }
+  .paper-cutting-page .fold-left { width: 100%; gap: 25px; }
+  .paper-cutting-page .fold-board { aspect-ratio: 1.1; }
+  .paper-cutting-page .fold-reference { width: 100%; grid-template-columns: 40% minmax(0, 1fr); }
+  .paper-cutting-page #reference-description { font-size: 15px; }
+}

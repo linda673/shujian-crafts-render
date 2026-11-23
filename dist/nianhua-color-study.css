@@ -1,0 +1,68 @@
+/* Both panels belong to the document scroll. Each has its own paper backdrop. */
+.nianhua-origin { min-height: 100svh; }
+.print-study {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 2560px;
+  min-height: 100svh;
+  margin-inline: auto;
+  padding-block: min(8.2vw, 210px) min(9.4vw, 241px);
+  background: var(--paper) url("assets/maliu-pages/embroidery/intro/page-bg.webp") center / cover no-repeat;
+}
+.print-study h2 {
+  margin: 0 6% 2.8cqw 8.8%;
+  font-size: 3.5cqw;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.study-layout {
+  display: grid;
+  grid-template-columns: 35.6% 56.4%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6.6% 0 10%;
+}
+.study-copy h3 {
+  font-size: 2.55cqw;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--teal);
+}
+.study-copy p {
+  max-width: 17em;
+  margin: 2.1cqw 0;
+  font-size: 1.65cqw;
+  line-height: 1.5;
+}
+.study-pigments div, .study-prints {
+  display: grid;
+  align-items: start;
+}
+.study-pigments div { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.2cqw; }
+.study-pigments img { width: 100%; }
+.study-pigments figcaption, .study-prints figcaption {
+  font-size: 1.3cqw;
+  line-height: 1.5;
+  text-align: center;
+}
+.study-pigments figcaption { margin-top: .5cqw; }
+.study-prints { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5cqw; }
+.study-card { width: 100%; aspect-ratio: 0.893; object-fit: contain; }
+.study-prints figcaption {
+  width: fit-content;
+  margin: 1.7cqw auto 0;
+  padding: .44em 1.25em;
+  background: url("assets/nianhua/color-study/label-frame.png") center / 100% 100% no-repeat;
+}
+@media (max-width: 900px) {
+  .print-study { padding: 48px 0 56px; background-position: center bottom; }
+  .print-study h2 { margin: 0 6% 28px; font-size: clamp(30px,6vw,46px); }
+  .study-layout { margin: 0 6%; grid-template-columns: minmax(0,1fr); gap: 34px; }
+  .study-copy h3 { font-size: clamp(22px,4vw,32px); }
+  .study-copy p { max-width: 35em; font-size: 18px; line-height: 1.7; margin: 15px 0 20px; }
+  .study-pigments { max-width: 380px; }
+  .study-pigments div { gap: 12px; }
+  .study-pigments figcaption, .study-prints figcaption { font-size: 16px; }
+  .study-prints { gap: 12px; }
+  .study-prints figcaption { margin-top: 12px; padding: 5px 15px; }
+}

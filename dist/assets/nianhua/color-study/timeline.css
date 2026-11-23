@@ -1,0 +1,15 @@
+#print-history {
+  --reading-width: 1200px;
+  --heading-size: clamp(28px, 3vw, 46px);
+  --copy-size: clamp(17px, 1.24vw, 20px);
+  padding: clamp(40px, 5.4vw, 82px) clamp(20px, 6vw, 100px);
+  color: #315b49;
+  background: var(--paper, #f8f4eb);
+}
+#print-history .history-image img { object-fit: cover; }
+#print-era-2006:checked ~ #print-year-2006,
+#print-era-2009:checked ~ #print-year-2009,
+#print-era-2011:checked ~ #print-year-2011,
+#print-era-2014:checked ~ #print-year-2014,
+#print-era-2019:checked ~ #print-year-2019,
+#print-era-2023:checked ~ #print-year-2023 { display: grid; }

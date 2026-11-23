@@ -1,0 +1,185 @@
+/* Shared icon navigation: identical sizes at the same viewport width. */
+:root .shared-craft-nav {
+  --craft-icon-width: clamp(60px, 5.6vw, 140px);
+  --craft-icon-height: clamp(44px, 4.4vw, 110px);
+  --craft-label-size: clamp(16px, 1.3vw, 30px);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+:root .shared-craft-nav > :is(a, button) {
+  position: relative;
+  display: grid;
+  grid-template-rows: var(--craft-icon-height) auto;
+  justify-items: center;
+  align-items: center;
+  flex: 0 0 var(--craft-icon-width);
+  width: var(--craft-icon-width);
+  min-width: 0;
+  height: auto;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #4f958b;
+  font-size: var(--craft-label-size);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transform: none !important;
+}
+:root .shared-craft-nav .nav-icon {
+  display: grid;
+  place-items: center;
+  width: var(--craft-icon-width);
+  height: var(--craft-icon-height);
+  margin: 0;
+  padding: 0;
+}
+:root .shared-craft-nav .craft-nav-icon {
+  display: block;
+  width: var(--craft-icon-width);
+  height: var(--craft-icon-height);
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: none !important;
+  filter: none;
+}
+:root .shared-craft-nav .craft-nav-label {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: var(--craft-label-size);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+:root .shared-craft-nav .craft-nav-label::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -.45em;
+  top: -.15em;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f6c3ac 10%, #dce9da 90%);
+  pointer-events: none;
+}
+:root .shared-craft-nav > :is(a, button):hover { color: #316e61; }
+:root .shared-craft-nav > :is(a, button):focus-visible {
+  outline: 2px solid #4f958b;
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+/* One document-level navigation position for every participating page. */
+:root {
+  --craft-nav-icon-width: clamp(60px, 5.6vw, 140px);
+  --craft-nav-icon-height: clamp(44px, 4.4vw, 110px);
+  --craft-nav-font-size: clamp(16px, 1.3vw, 30px);
+  --craft-nav-gap: clamp(20px, 2.4vw, 60px);
+  --craft-nav-width: calc(3 * var(--craft-nav-icon-width) + 2 * var(--craft-nav-gap));
+  --craft-nav-height: calc(var(--craft-nav-icon-height) + 8px + 1.3 * var(--craft-nav-font-size));
+}
+:root body > .shared-craft-nav {
+  --craft-icon-width: var(--craft-nav-icon-width);
+  --craft-icon-height: var(--craft-nav-icon-height);
+  --craft-label-size: var(--craft-nav-font-size);
+  position: absolute;
+  z-index: 30;
+  top: clamp(24px, 2.2vw, 56px);
+  right: auto;
+  bottom: auto;
+  left: calc(100vw - max(3.5vw, calc((100vw - 2560px) / 2 + 89.6px)) - var(--craft-nav-width));
+  width: var(--craft-nav-width);
+  height: var(--craft-nav-height);
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  gap: var(--craft-nav-gap);
+  justify-content: flex-start;
+  background: none;
+  transform: none;
+}
+:root .craft-nav-space {
+  width: var(--craft-nav-width);
+  height: var(--craft-nav-height);
+  min-width: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+body > header:has(> .craft-nav-space) {
+  grid-template-columns: 340px minmax(0, 1fr) var(--craft-nav-width);
+}
+/* The poster retains its original composition; mask its former baked-in controls. */
+:root .poster-content { position: relative; }
+:root .poster-content > #reference-image { display: block; width: 100%; height: auto; }
+:root .poster-content::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 3%;
+  right: 3.5%;
+  width: 22%;
+  height: 13%;
+  background: #f3f4e9 url('assets/maliu-pages/embroidery/intro/page-bg.webp') right top / 450% 900% no-repeat;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  body > header:has(> .craft-nav-space) { grid-template-columns: 1fr var(--craft-nav-width); }
+}
+@media (max-width: 760px) {
+  :root {
+    --craft-nav-icon-width: 64px;
+    --craft-nav-icon-height: 50px;
+    --craft-nav-font-size: 18px;
+    --craft-nav-gap: 24px;
+  }
+  :root body:has(> .shared-craft-nav) { padding-top: 128px; }
+  :root body > .shared-craft-nav {
+    top: 24px;
+    left: calc((100vw - var(--craft-nav-width)) / 2);
+  }
+  :root .craft-nav-space { display: none; }
+  body > header:has(> .craft-nav-space) { grid-template-columns: 1fr; }
+}
+
+/* Gentle press feedback, independent of the navigation layout and link handlers. */
+:root .shared-craft-nav .craft-nav-icon {
+  scale: 1;
+  translate: 0 0;
+  transform-origin: center;
+  transition: scale 180ms cubic-bezier(.2,.8,.25,1),
+              translate 180ms cubic-bezier(.2,.8,.25,1), opacity 120ms ease;
+}
+:root .shared-craft-nav > :is(a, button):active .craft-nav-icon {
+  scale: .95;
+  translate: 0 2px;
+  opacity: .92;
+  transition-duration: 75ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root .shared-craft-nav .craft-nav-icon {
+    transition: none;
+  }
+  :root .shared-craft-nav > :is(a, button):active .craft-nav-icon {
+    scale: 1;
+    translate: 0 0;
+  }
+}

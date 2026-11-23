@@ -1,0 +1,539 @@
+/* Reference: stone-carving-origin.css */
+:root{color-scheme:light;--paper:#f8f4eb;--ink:#39785c;--teal:#357f70;--gold:#ab8539;--rule:#a2c1b3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Songti SC","STSong","SimSun",serif}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+img{display:block;max-width:100%}h1,h2,h3,p,figure{margin:0}
+/* The backdrop keeps its intrinsic ratio; page content can grow independently. */
+.embroidery-origin{width:100%;max-width:2560px;margin:auto;overflow:hidden;container-type:inline-size;background:var(--paper) url("assets/maliu-pages/embroidery/intro/page-bg.webp") center top/100% auto no-repeat}
+.top-rule{margin:5cqw 4.4% 0 5.4%;border-top:1px solid var(--rule)}
+.origin-main{margin:1.3cqw 8% 0 8.9%}
+/* Header and photo are in normal flow: longer text pushes the photo down. */
+.chapter-heading{margin-bottom:1.3cqw}
+.chapter{display:flex;align-items:center;gap:1.5cqw;font-size:1.3cqw;font-weight:600;line-height:1.4;letter-spacing:.09em;color:var(--teal)}
+.chapter-seal{position:relative;isolation:isolate;display:grid;place-items:center;flex-shrink:0;width:1.5cqw;height:1.5cqw;border-radius:40%;background:#efb59a;color:#f9dccb;font-size:1.1cqw}
+.chapter-seal::before,.chapter-seal::after{content:"";position:absolute;z-index:-1;inset:-20% 15%;border-radius:50%;background:#efb59a}.chapter-seal::after{inset:15% -20%}
+.chapter-heading h1{font-size:3.5cqw;line-height:1.15;font-weight:600;letter-spacing:.025em;margin:.25cqw 0 .3cqw}
+.subtitle{font-size:1.35cqw;font-weight:500;line-height:1.4;letter-spacing:.1em;color:var(--teal)}
+.origin-layout{display:grid;grid-template-columns:minmax(0,43.8fr) minmax(0,32fr);column-gap:7.3cqw;align-items:start}
+.photo-wrap{position:relative;isolation:isolate;min-width:0;aspect-ratio:1.468}
+.photo-wrap.has-assets::before{content:"";position:absolute;inset:4% 1% -2.5% -2.5%;border:2px solid #e7d7a7;z-index:-1}
+.craft-photo{width:100%;aspect-ratio:1.468;object-fit:cover;object-position:center}
+.stone-decoration{position:absolute;left:-11%;bottom:-13%;width:34%;height:auto;pointer-events:none}
+.story-copy{min-width:0}
+.eyebrow{font-size:1.05cqw;line-height:1.4;letter-spacing:.1em;color:var(--gold)}
+.story-copy h2{font-size:2.65cqw;font-weight:600;line-height:1.4;letter-spacing:.02em;margin:1.15cqw 0 1.6cqw}
+.intro{font-size:1.65cqw;font-weight:500;line-height:1.5;letter-spacing:.015em}
+.keywords{display:flex;justify-content:space-between;list-style:none;margin:1.8cqw 0 1.6cqw;padding:0;gap:2cqw}
+.keywords li{position:relative;display:grid;place-items:center;width:26%;aspect-ratio:1.05;font-size:2cqw;font-weight:600;background:url("assets/maliu-pages/embroidery/origin/layout-reference/assets__stone-carving__origin__keyword-frame.svg") center/contain no-repeat}
+.keywords li+li::before{content:"·";position:absolute;left:-25%;color:#dfcc95}
+.story-button{display:inline-flex;align-items:center;justify-content:center;background:#4c796e;border:0;color:#fffaf0;font-size:1.45cqw;line-height:1.5;padding:.7em 1.65em;transition:background .18s}
+.story-button:hover{background:#355e51}
+.origin-footer{display:flex;justify-content:space-between;align-items:start;gap:20px;margin:5.4cqw 4.4% 0 5.4%;padding:1cqw 4% 1.3cqw;border-top:1px solid var(--rule);font-size:1.05cqw;line-height:1.8;color:#243e30}
+.footer-links{display:flex;flex-wrap:wrap;gap:1.7em}.footer-links button{padding:0;background:none;border:0;color:inherit}.footer-links a:hover,.footer-links button:hover{text-decoration:underline}
+dialog{width:min(640px,90vw);max-height:85svh;overflow:auto;background:var(--paper);border:1px solid var(--gold);color:var(--ink);padding:34px;line-height:1.8}
+dialog::backdrop{background:#173b2b70}.close{float:right;border:0;background:none;color:inherit;font-size:30px;line-height:1}
+.dialog-kicker{color:var(--gold);margin-bottom:10px}dialog h2{font-size:27px;font-weight:500;line-height:1.5}dialog h3{font-size:20px;margin:22px 0 6px}dialog p{margin-top:10px}dialog .story-button{font-size:18px;margin-top:24px}
+@media(max-width:900px){
+ .embroidery-origin{min-height:100svh;background-size:auto 850px}
+ .top-rule{margin:30px 6% 0}.origin-main{margin:26px 6% 0}.chapter-heading{margin-bottom:30px}
+ .chapter{font-size:18px;line-height:1.5;gap:18px}.chapter-seal{width:23px;height:23px;font-size:17px}
+ .chapter-heading h1{font-size:clamp(28px,5.8vw,46px);line-height:1.35;margin:14px 0 10px;letter-spacing:.015em}
+ .subtitle{font-size:17px;line-height:1.7;letter-spacing:.04em}
+ .origin-layout{grid-template-columns:minmax(0,1fr);gap:60px}.photo-wrap{width:94%;margin-left:4%}
+ .stone-decoration{left:-10%;width:32%;bottom:-12%}
+ .eyebrow{font-size:13px}.story-copy h2{font-size:clamp(26px,4.8vw,36px);margin:18px 0;line-height:1.4}
+ .intro{font-size:18px;line-height:1.8}.keywords{max-width:480px;gap:25px;margin:28px 0}.keywords li{font-size:clamp(24px,5vw,34px)}
+ .story-button{font-size:19px;padding:12px 28px;min-height:48px}
+ .origin-footer{flex-wrap:wrap;gap:12px;margin:42px 6% 0;padding:18px 0 24px;font-size:14px}
+ dialog{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){.story-button{transition:none}}
+
+/* Reference crop coordinates are percentages of the unchanged 16:9 source.
+   The image keeps its natural ratio; this is a preview, not a separate photo file. */
+.reference-art{position:absolute;left:-14.38356%;top:0;width:114.38356%;height:113.18267%;overflow:hidden;pointer-events:none}
+.reference-art img{position:absolute;width:199.6008%;max-width:none;height:auto;left:-5.18962%;top:-47.25458%}
+.has-assets .reference-art{display:none}
+[hidden]{display:none!important}
+
+
+/* Reference: paper-structure.css */
+.pc-structure {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  min-height: clamp(320px, 33vw, 570px);
+  background: #1c302b;
+  color: #fff8e8;
+}
+.pc-banner, .pc-structure::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.pc-banner { z-index: -2; object-fit: cover; object-position: 63% center; }
+.pc-structure::after { content: ""; z-index: -1; background: linear-gradient(90deg, #142720d9, #1427205e 48%, transparent 77%); }
+.pc-banner-copy { width: var(--content); margin-inline: auto; padding-block: clamp(34px, 4.4vw, 70px); }
+.pc-banner-copy h2 { font-size: clamp(40px, 4.6vw, 74px); font-weight: 500; line-height: 1.18; letter-spacing: .025em; }
+.pc-banner-copy p { margin-top: 1em; font-size: clamp(16px, 1.3vw, 20px); line-height: 1.65; }
+.pc-banner-copy a { display: inline-flex; gap: 1.25em; align-items: center; min-height: 44px; margin-top: 1.1em; border-bottom: 1px solid #d9b77f; font-size: 16px; }
+.pc-banner-copy a:hover { color: #f7d6a7; }
+@media (max-width: 600px) {
+  .pc-banner { object-position: 64% center; }
+  .pc-structure::after { background: linear-gradient(90deg, #142720e6, #14272096 50%, #14272019); }
+}
+
+
+/* Reference: paper-flower-study.css */
+.pc-lab {
+  background: #f7f4ec;
+  color: #284b3d;
+  padding: var(--section-space) var(--gutter);
+}
+.study-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  grid-template-areas: "head head" "photo diagram" "photo note";
+  max-width: var(--reading-width);
+  margin-inline: auto;
+}
+.study-intro { grid-area: head; text-align: center; }
+.study-intro h2 { font-size: var(--heading-size); font-weight: 500; line-height: 1.3; }
+.study-intro > p { margin: .65em 0 1.7em; font-size: clamp(15px, 1.15vw, 18px); line-height: 1.6; }
+.pc-lab fieldset { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); min-width: 0; margin: 0 0 1rem; border: 0; padding: 0; }
+.pc-lab legend, .pc-lab input { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+.pc-lab label span { display: grid; place-items: center; min-height: 48px; border-block: 1px solid #c6cebd; border-inline-start: 1px solid #c6cebd; cursor: pointer; font-size: clamp(16px, 1.4vw, 21px); }
+.pc-lab label:last-child span { border-inline-end: 1px solid #c6cebd; }
+.pc-lab input:checked + span { background: #2c493d; color: #fff8e8; border-color: #2c493d; }
+.pc-lab input:focus-visible + span { outline: 3px solid #b7803c; outline-offset: -4px; }
+.closeup { grid-area: photo; position: relative; min-height: clamp(290px, 30vw, 460px); background: #eae1cf; }
+.closeup img { display: none; width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
+.closeup img.pl-paper { object-fit: contain; padding: clamp(16px, 2vw, 32px); }
+.pattern-overview, .stitch-reading { background: #263f34; color: #fcf4df; padding-inline: clamp(18px, 3.5vw, 60px); }
+.pattern-overview { grid-area: diagram; display: grid; align-content: end; justify-items: center; padding-block: 24px 12px; }
+.pl-art { width: min(100%, 205px); height: auto; }
+.pattern-overview figcaption { margin-top: 6px; font-size: 13px; color: #eee4cc; }
+.pattern-overview figcaption i { display: inline-block; width: .85em; height: .85em; border: 1px solid currentColor; border-radius: 50%; }
+.stitch-reading { grid-area: note; padding-block: 10px 28px; text-align: center; }
+.reading-note h3 { margin-bottom: .4em; font-size: clamp(21px, 1.8vw, 28px); font-weight: 500; }
+.reading-note p { font-size: clamp(16px, 1.15vw, 18px); line-height: 1.7; text-wrap: balance; }
+.reading-note, .pl-pin { display: none; }
+.pc-lab:has(#pl-paper:checked) .pl-paper,
+.pc-lab:has(#pl-hole:checked) .pl-hole,
+.pc-lab:has(#pl-link:checked) .pl-link { display: block; }
+@media (prefers-reduced-motion: no-preference) {
+  .closeup img { animation: detail-fade .28s ease-out; }
+  @keyframes detail-fade { from { opacity: .65; } to { opacity: 1; } }
+}
+@media (max-width: 680px) {
+  .study-grid { grid-template-columns: minmax(83px, .68fr) minmax(0, 1.32fr); grid-template-areas: "head head" "photo photo" "diagram note"; }
+  .closeup { min-height: 0; aspect-ratio: 3 / 2; }
+  .pattern-overview { align-content: center; padding: 14px 4px 14px 12px; }
+  .pattern-overview figcaption { font-size: 12px; text-align: center; }
+  .stitch-reading { display: grid; align-content: center; text-align: left; padding: 16px; }
+}
+
+
+/* Reference: assets/maliu-pages/stone-carving/study/stone-observation.css */
+#embroidery-study, #stitch-details {
+  --reading-width: 1200px;
+  --gutter: clamp(20px, 6vw, 100px);
+  --content: min(var(--reading-width), calc(100% - 2 * var(--gutter)));
+  --section-space: clamp(40px, 5.4vw, 82px);
+  --heading-size: clamp(28px, 3vw, 46px);
+}
+#embroidery-study .pc-banner { left: auto; right: 0; width: 73%; object-position: 46% 55%; }
+#embroidery-study::after { background: linear-gradient(90deg, #182d25 23%, #182d25ed 30%, #182d2538 57%, transparent 74%); }
+.pattern-map { position: relative; width: min(100%, 185px); }
+.pattern-map img { width: 100%; height: auto; }
+.focus-ring { position: absolute; left: 70%; top: 49%; transform: translate(-50%, -50%); width: 11%; aspect-ratio: 1; border: 2px solid ivory; border-radius: 50%; box-shadow: 0 0 0 2px #70472f; }
+#stitch-details:has(#stone-petal:checked) .focus-ring { left: 37%; top: 50%; }
+#stitch-details:has(#stone-leaf:checked) .focus-ring { left: 76%; top: 86%; }
+#stitch-details:has(#stone-edge:checked) .view-edge,
+#stitch-details:has(#stone-petal:checked) .view-petal,
+#stitch-details:has(#stone-leaf:checked) .view-leaf { display: block; }
+.stone-workshop { width:min(100%, var(--reading-width)); margin:1.4em auto 0; text-align:right; }
+.stone-workshop a { display:inline-flex; align-items:center; gap:1em; min-height:44px; border-bottom:1px solid #ac9b77; }
+@media(max-width:680px){
+  #embroidery-study .pc-banner { width:100%; object-position:55% center; }
+  #embroidery-study::after { background:linear-gradient(90deg,#172c25ed,#172c25aa 45%,#172c2522); }
+}
+
+
+/* Reference: paper-history.css */
+#paper-history {
+  padding: var(--section-space) var(--gutter);
+  color: #315b49;
+  background: var(--paper);
+}
+.history-inner { max-width: var(--reading-width); margin-inline: auto; }
+.history-inner h2 { font-size: var(--heading-size); font-weight: 500; letter-spacing: .04em; }
+.history-prelude { max-width: 54em; margin-top: .75em; font-size: var(--copy-size); line-height: 1.85; color: #395849; }
+.history-prelude a { font-size: .84em; text-decoration: underline; text-underline-offset: .25em; }
+.history-view {
+  min-width: 0; border: 0; padding: 0; margin: clamp(20px, 3vw, 40px) 0 0;
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); position: relative;
+}
+.history-view > input, .history-view > legend {
+  position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+.history-view > label {
+  display: grid; gap: 3px; position: relative; padding: 0 5px 17px;
+  border-bottom: 1px solid #b7bfb0; cursor: pointer;
+  font-size: clamp(15px, 1.3vw, 19px); color: #4f6558;
+}
+.history-view > label span {
+  color: inherit; font: 500 clamp(22px, 2.5vw, 36px)/1.3 Georgia, "Songti SC", "SimSun", serif;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.history-view > label::after {
+  content: ""; position: absolute; bottom: -4px; left: 6px;
+  width: 7px; height: 7px; background: #9ba99b; transform: rotate(45deg);
+}
+.history-view > input:checked + label { color: #903e2f; border-color: currentColor; }
+.history-view > input:checked + label::after { background: #a64937; box-shadow: 0 0 0 3px var(--paper); }
+.history-view > input:focus-visible + label { outline: 2px solid #935440; outline-offset: 3px; }
+.history-leaf {
+  display: none; grid-column: 1 / -1; grid-template-columns: minmax(0,1.13fr) minmax(0,1fr);
+  align-items: center; margin-top: clamp(22px, 2.7vw, 38px); background: #edf0e6;
+}
+#era-2017:checked ~ #leaf-2017,
+#era-2018:checked ~ #leaf-2018,
+#era-2019:checked ~ #leaf-2019,
+#era-2020:checked ~ #leaf-2020,
+#era-2023:checked ~ #leaf-2023,
+#era-2024:checked ~ #leaf-2024 { display: grid; }
+.history-image {
+  display: grid; place-items: center; aspect-ratio: 3 / 2; overflow: hidden;
+  background: #e0e2d2;
+}
+.history-image img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.history-text { padding: clamp(24px, 3.2vw, 50px); }
+.history-text h3 { font-size: clamp(24px, 2.4vw, 38px); line-height: 1.4; font-weight: 500; }
+.history-text p { margin: .8em 0 1.1em; font-size: var(--copy-size); line-height: 1.85; color: #395849; }
+.history-text .history-reading { padding-left: .85em; border-left: 2px solid #bc8370; font-size: clamp(15px, 1.12vw, 17px); }
+.history-text a { display: inline-block; padding: .5em 0; border-bottom: 1px solid #ab9675; font-size: 15px; }
+.history-text a:hover { color: #903e2f; }
+@media (max-width: 710px) {
+  .history-view { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 16px; }
+  .history-leaf { margin-top: 4px; }
+  .history-leaf { grid-template-columns: minmax(0,1fr); }
+  .history-text { padding: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .history-text { animation: paper-arrive .25s ease-out; }
+}
+
+.history-period { margin-top: 1.6em; font-size: clamp(19px, 1.6vw, 24px); font-weight: 500; }
+.history-period + .history-view { margin-top: 1em; }
+.history-links { display: flex; gap: 0 1em; flex-wrap: wrap; }
+.history-outro { margin: clamp(22px, 3vw, 40px) auto 0; line-height: 1.9; font-size: var(--copy-size); }
+.history-outro a { display: inline; text-decoration: underline; text-underline-offset: .25em; }
+.history-view > label span { font-size: clamp(19px, 2.15vw, 30px); }
+
+
+/* Reference: assets/maliu-pages/stone-carving/history/timeline.css */
+#embroidery-history {
+  --paper: #f8f4eb;
+  --copy-size: clamp(17px, 1.24vw, 20px);
+  --heading-size: clamp(28px, 3vw, 46px);
+  --reading-width: 1200px;
+  color: #315b49;
+  background: var(--paper);
+  padding: clamp(40px, 5.4vw, 82px) clamp(20px, 6vw, 100px);
+}
+#embroidery-history a { color: inherit; }
+#embroidery-history a:hover { color: #903e2f; }
+#embroidery-history .history-image img { object-fit: cover; }
+#stone-era-2008:checked ~ #stone-leaf-2008,
+#stone-era-2015:checked ~ #stone-leaf-2015,
+#stone-era-2019:checked ~ #stone-leaf-2019,
+#stone-era-2021:checked ~ #stone-leaf-2021,
+#stone-era-2023:checked ~ #stone-leaf-2023,
+#stone-era-2024:checked ~ #stone-leaf-2024 { display: grid; }
+
+
+/* Reference: paper-meanings.css */
+.paper-meanings { display: flow-root; color: var(--ink); }
+.paper-meanings h2, .meaning-gallery, .meaning-footnote { width: var(--content); margin-inline: auto; }
+.paper-meanings h2 { margin-top: var(--section-space); margin-bottom: clamp(24px, 3vw, 48px); font-size: var(--heading-size); font-weight: 500; line-height: 1.3; text-wrap: balance; }
+.meaning-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 3vw, 48px); }
+.meaning-gallery figure { display: grid; justify-items: center; align-content: start; gap: 14px; text-align: center; }
+.meaning-art { position: relative; width: min(100%, 350px); aspect-ratio: 960 / 829; background: url("assets/maliu-pages/embroidery/origin/layout-reference/assets__paper-cutting__meanings__cloud.webp") center / contain no-repeat; }
+.meaning-art img { position: absolute; inset: 4%; width: 92%; height: 92%; object-fit: contain; }
+.meaning-gallery figcaption { padding: .32em 1.15em; border: 1px solid #dcca97; border-radius: 4em; font-size: clamp(16px, 1.45vw, 22px); line-height: 1.45; color: #326c50; background: #f7eed7; }
+.meaning-footnote { display: flex; align-items: center; justify-content: center; gap: 1em; margin-top: clamp(32px, 4vw, 62px); font-size: clamp(15px, 1.15vw, 18px); line-height: 1.65; text-align: center; text-wrap: balance; color: var(--teal); }
+.meaning-footnote::before, .meaning-footnote::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
+@media (max-width: 600px) {
+  .meaning-gallery { grid-template-columns: 1fr; gap: 32px; }
+  .meaning-art { width: min(78%, 280px); }
+  .meaning-gallery figure { gap: 8px; }
+}
+
+
+/* Reference: paper-ending.css */
+.paper-ending-story {
+  width: 100%;
+  max-width: 2560px;
+  margin-inline: auto;
+  container-type: inline-size;
+  isolation: isolate;
+  position: relative;
+  background: var(--paper) url("assets/maliu-pages/embroidery/intro/page-bg.webp") center top / 100% auto no-repeat;
+}
+.paper-ending-story::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: auto 0 0;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  background: url("assets/maliu-pages/embroidery/origin/layout-reference/assets__paper-cutting__meanings__ending-landscape.webp") center bottom / contain no-repeat;
+  mask-image: linear-gradient(to bottom, transparent, #000 20%);
+}
+.paper-ending-story .paper-meanings { background: transparent; }
+.paper-ending-story .meaning-footnote { margin-bottom: 0; }
+.paper-next {
+  display: grid;
+  justify-items: center;
+  gap: .52cqw;
+  padding: clamp(36px, 4vw, 64px) var(--gutter) clamp(40px, 5vw, 84px);
+  text-align: center;
+  color: var(--ink);
+}
+.paper-next h2 { font-size: var(--heading-size); font-weight: 500; line-height: 1.35; text-wrap: balance; }
+.paper-next p { font-size: var(--copy-size); line-height: 1.55; text-wrap: balance; }
+.paper-craft-link {
+  display: inline-grid;
+  place-items: center;
+  min-height: 44px;
+  margin-top: .35cqw;
+  padding: .24em 1.6em;
+  border: 3px double #e6dabb;
+  border-radius: 14px 7px;
+  outline: 1px solid #315e4d;
+  background: #4c796e;
+  color: #fff9eb;
+  font-size: clamp(18px, 1.45vw, 23px);
+  line-height: 1.3;
+}
+.paper-craft-link:hover { background: #355e51; }
+.paper-craft-link:focus-visible { outline: 3px solid var(--gold); }
+.paper-observe-link { display: inline-grid; place-items: center; min-height: 44px; color: #38634e; font-size: clamp(14px, 1cqw, 24px); }
+.paper-observe-link:hover, .paper-end-footer button:hover { text-decoration: underline; }
+.paper-end-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  max-width: 2560px;
+  margin-inline: auto;
+  padding: clamp(18px, 1.5vw, 36px) 5.5%;
+  background: #f8f4eb;
+  color: #365f4f;
+  font-size: clamp(17px, 1.35vw, 21px);
+}
+.paper-end-footer strong { font-weight: 600; }
+.paper-end-footer p { margin-top: .55em; font-size: .72em; }
+.paper-end-footer button { min-height: 44px; padding: .3em 0 .3em 1.5em; border: 0; border-left: 1px solid var(--rule); background: transparent; color: inherit; }
+@media (max-width: 600px) {
+  .paper-ending-story { background-size: auto 100%; }
+
+  .paper-next { gap: 10px; padding: 36px var(--gutter) 58px; }
+  .paper-observe-link { min-height: 44px; }
+  .paper-end-footer button { padding-left: 0; border-left: 0; }
+}
+
+
+    .embroidery-ending {
+      --gutter: clamp(20px, 6vw, 100px);
+      --content: min(1200px, calc(100% - 2 * var(--gutter)));
+      --section-space: clamp(40px, 5.4vw, 82px);
+      --heading-size: clamp(28px, 3vw, 46px);
+      --copy-size: clamp(17px, 1.24vw, 20px);
+    }
+    .embroidery-ending .meaning-art img {
+      object-fit: cover;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 173'%3E%3Cpath d='M100 1 Q116 1 129 12 Q157 9 164 34 Q191 39 190 66 Q210 88 190 110 Q190 138 163 143 Q151 170 126 162 Q101 183 77 163 Q47 171 37 145 Q9 141 10 113 Q-10 90 10 66 Q9 39 36 33 Q44 9 73 12 Q85 1 100 1Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+  
+/* Embroidery content adapters; dimensions and responsive breakpoints follow
+   stone-carving-origin.html. Images remain original files; cropping is CSS only. */
+.embroidery-origin { min-height: 100svh; }
+.skip-link { position: fixed; left: 20px; top: -100px; padding: 12px 20px; background: var(--ink); color: white; z-index: 10; }
+.skip-link:focus { top: 16px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.cloth-stage { position: absolute; inset: 0; overflow: hidden; }
+.cloth-stage img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.photo-wrap::before { content: ''; position: absolute; inset: 4% 1% -2.5% -2.5%; border: 2px solid #e7d7a7; z-index: -1; }
+.photo-wrap > figcaption { position: absolute; top: 100%; right: 0; margin-top: .8em; font-size: clamp(11px,.85vw,14px); color: #657965; }
+.photo-wrap > figcaption span { color: #657965; }
+.banner-inner { display: contents; }
+.pc-structure { overflow: hidden; }
+.closeup { margin: 0; }
+.closeup .detail-window { position: absolute; inset: 0; overflow: hidden; }
+.closeup .detail-window img { display: block; }
+.closeup figcaption { position: absolute; left: 12px; bottom: 12px; padding: 5px 10px; background: #f8f4ebdf; color: #315b49; font-size: 13px; }
+.pattern-map { width: min(100%,185px); }
+.focus-ring { width: 32%; }
+.stitch-reading h3 { margin-bottom: .4em; font-size: clamp(21px,1.8vw,28px); font-weight: 500; }
+.stitch-reading p { font-size: clamp(16px,1.15vw,18px); line-height: 1.7; text-wrap: balance; }
+.study-disclosure, .pattern-proof { max-width: 1200px; margin-inline: auto; }
+.study-disclosure { font-size: 13px; color: #657965; line-height: 1.8; margin-top: 22px; text-align: right; }
+.pattern-proof { margin-top: 26px; border-block: 1px solid #afc3b4; padding: 16px 0; }
+.pattern-proof summary { cursor: pointer; font-size: 18px; }
+.pattern-proof > div { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 850px; margin: 24px auto; }
+.pattern-proof figure { padding: 16px; background: #edf0e6; text-align: center; }
+.pattern-proof img { width: 100%; height: 300px; object-fit: contain; }
+.pattern-proof figcaption { margin-top: 12px; }
+.pattern-proof > p { font-size: 16px; line-height: 1.8; margin-top: 18px; }
+.source-link { font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.history-view { grid-template-columns: repeat(4,minmax(0,1fr)); }
+#era-2003:checked ~ #year-2003, #era-2008:checked ~ #year-2008,
+#era-2013:checked ~ #year-2013, #era-2018:checked ~ #year-2018 { display: grid; }
+.history-image { position: relative; }
+.history-image figcaption { position: absolute; right: 12px; bottom: 12px; padding: 5px 8px; background: #f8f4ebdf; color: #315b49; font-size: 12px; }
+.meaning-section .section-lead { width: var(--content); margin: -12px auto 28px; font-size: var(--copy-size); line-height: 1.85; }
+.sources { padding-left: 20px; font-size: 16px; }
+.sources li { margin: 12px 0; }
+.sources a { text-decoration: underline; text-underline-offset: 3px; }
+@media(max-width:710px) { .history-view { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .pattern-proof > div { gap: 12px; }.pattern-proof img { height: 210px; }.study-disclosure { text-align: left; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation: none!important; transition: none!important; } }
+
+/* Six dated chapters: same timeline, image ratio and card proportions as stone. */
+#embroidery-history .history-view { grid-template-columns: repeat(6,minmax(0,1fr)); }
+#era-2023:checked ~ #year-2023, #era-2025:checked ~ #year-2025 { display: grid; }
+#embroidery-history .history-leaf { min-height: 0; }
+#embroidery-history .history-image { align-self: center; aspect-ratio: 3/2; min-height: 0; overflow: hidden; position: relative; }
+#embroidery-history .history-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+#embroidery-history .history-text { align-self: center; }
+#embroidery-history .history-text h3 { text-wrap: balance; }
+.history-disclosure { margin: 14px 0 0; font-size: 12px; line-height: 1.8; color: #687969; }
+@media(max-width:710px) {
+  #embroidery-history .history-view { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  #embroidery-history .history-leaf { min-height: 0; }
+  #embroidery-history .history-image { min-height: 0; aspect-ratio: 3/2; }
+}
+/* 与年画溯源页共用揭幕、分层入场和轻视差的节奏。内容默认可见。 */
+@media screen and (prefers-reduced-motion: no-preference) {
+  :root {
+    --stitch-ease: cubic-bezier(.18,.76,.23,1);
+    --stitch-rise: 30px;
+  }
+  @keyframes stitch-rise-in {
+    from { opacity: .15; transform: translateY(var(--stitch-rise)); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes stitch-uncover {
+    from { clip-path: inset(0 94% 0 0); transform: scale(.97); }
+    to { clip-path: inset(0); transform: none; }
+  }
+  @keyframes stitch-open {
+    from { opacity: .22; transform: perspective(800px) rotateY(-48deg) rotateZ(-5deg) scale(.91); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes stitch-rule-in {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  @keyframes stitch-color-in {
+    from { clip-path: inset(0 100% 0 0); filter: saturate(.2); }
+    to { clip-path: inset(0); filter: saturate(1); }
+  }
+  .top-rule { transform-origin: left; animation: stitch-rule-in .8s var(--stitch-ease) backwards; }
+  .chapter-heading.entered > *, .story-copy.entered > *,
+  .banner-copy.entered > *, .next-section.entered > *,
+  .study-intro.entered, #history-title.entered, #meaning-title.entered {
+    animation: stitch-rise-in .74s var(--stitch-ease) backwards;
+  }
+  .chapter-heading.entered h1, .story-copy.entered h2,
+  .banner-copy.entered p, .next-section.entered p { animation-delay: .10s; }
+  .chapter-heading.entered .subtitle, .story-copy.entered .intro,
+  .banner-copy.entered a, .next-section.entered .paper-craft-link { animation-delay: .20s; }
+  .story-copy.entered .keywords, .next-section.entered .paper-observe-link { animation-delay: .27s; }
+  .story-copy.entered .story-button { animation-delay: .34s; }
+  .photo-wrap.entered .cloth-stage { animation: stitch-uncover 1.05s var(--stitch-ease) backwards; }
+  .photo-wrap.entered > figcaption { --stitch-rise: 12px; animation: stitch-rise-in .6s .25s var(--stitch-ease) backwards; }
+  .pattern-overview.entered .pattern-map { animation: stitch-open .88s var(--stitch-ease) backwards; }
+  .closeup img, .history-text { animation: none; }
+  .closeup.entered .detail-window { animation: stitch-uncover .54s var(--stitch-ease) backwards; }
+  .focus-ring { transition: left .38s var(--stitch-ease), top .38s var(--stitch-ease); }
+  .history-view.entered .history-image { animation: stitch-uncover .66s var(--stitch-ease) backwards; }
+  .history-view.entered .history-text { --stitch-rise: 16px; animation: stitch-rise-in .58s .12s var(--stitch-ease) backwards; }
+  .meaning-gallery figure.entered .meaning-art img { animation: stitch-open .92s var(--motif-delay, 0s) var(--stitch-ease) backwards; }
+  .meaning-gallery figure.entered figcaption {
+    --stitch-rise: 14px;
+    animation: stitch-rise-in .56s calc(var(--motif-delay, 0s) + .16s) var(--stitch-ease) backwards;
+  }
+  .pattern-proof[open] figure:first-child img { animation: stitch-uncover .60s var(--stitch-ease) backwards; }
+  .pattern-proof[open] figure:last-child img { animation: stitch-color-in .88s .20s var(--stitch-ease) backwards; }
+  dialog[open] { --stitch-rise: 12px; animation: stitch-rise-in .26s var(--stitch-ease); }
+  html { scroll-behavior: smooth; }
+
+  @supports (animation-timeline: view()) {
+    #embroidery-study { overflow: clip; view-timeline-name: --embroidery-banner; }
+    #embroidery-study .pc-banner {
+      animation: stitch-depth auto linear both;
+      animation-timeline: --embroidery-banner;
+    }
+    @keyframes stitch-depth {
+      from { transform: translateY(-4%) scale(1.11); }
+      to { transform: translateY(4%) scale(1.11); }
+    }
+  }
+  @media (min-width: 601px) {
+    .meaning-gallery figure:nth-child(2) { --motif-delay: .15s; }
+    .meaning-gallery figure:nth-child(3) { --motif-delay: .30s; }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .meaning-art img { transition: translate .3s, filter .3s; }
+    .meaning-art:hover img { translate: 0 -6px; filter: drop-shadow(0 7px 4px #60433136); }
+    .focus-controls span, .history-view > label { transition: color .2s, background-color .2s, border-color .2s; }
+  }
+  @media (max-width: 600px) {
+    :root { --stitch-rise: 16px; }
+    .story-copy.entered .story-button { animation-delay: .17s; }
+  }
+}
+
+/* Preserve the complete illustrations; captions use the shared stone-page style above. */
+.embroidery-ending .meaning-gallery-refined .meaning-art {
+  width: min(100%, 350px);
+  aspect-ratio: 1;
+  background-size: 100% 90%;
+}
+.embroidery-ending .meaning-gallery-refined .meaning-art img {
+  inset: 2%; width: 96%; height: 96%;
+  object-fit: contain; mask: none; -webkit-mask: none;
+}
+@media (max-width: 600px) {
+  .embroidery-ending .meaning-gallery-refined .meaning-art { width: min(88%, 320px); }
+}
+
+/* Lower-left embroidery accent, matching the stone origin photo composition. */
+.embroidery-origin .embroidery-decoration {
+  position: absolute;
+  z-index: 1;
+  left: -11%;
+  bottom: -13%;
+  width: 34%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .embroidery-origin .embroidery-decoration {
+    left: -10%;
+    bottom: -12%;
+    width: 32%;
+  }
+}

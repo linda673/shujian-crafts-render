@@ -1,0 +1,8 @@
+window.SHUJIN_ASSETS={
+ logo:'assets/shujin/brand/logo.png',
+ backgrounds:['assets/shujin/backgrounds/bg-bamboo-left.png','assets/shujin/backgrounds/bg-rock-right.png'],
+ patterns:[{id:'bamboo',name:'竹影成枝'},{id:'butterfly',name:'蝶恋花香'},{id:'hibiscus',name:'扶桑花'},{id:'orchid',name:'兰草'}].map(p=>({...p,line:`assets/shujin/patterns/line/${p.id}.webp`,color:`assets/shujin/patterns/color/${p.id}.png`,thumb:`assets/shujin/patterns/thumb/${p.id}.png`,exampleLine:`assets/shujin/examples/${p.id}-line.svg`,exampleColor:`assets/shujin/examples/${p.id}-color.svg`}))
+};
+
+const shujinLessons={"bamboo": {"observe": "观察竹节的分段与竹叶的聚散，沿枝干辨认叶片方向。", "color": "先以浅绿铺竹叶，再从叶根向叶尖叠染；竹竿分节染色，保留竹节层次。", "stitch": "顺竹竿纵向铺线，沿每片竹叶由叶根走向叶尖；细叶使用短针。", "parts": "竹叶、竹竿或竹节", "groups": [["竹叶丝线", [["浅绿", "#b4cea0"], ["竹青", "#73986a"], ["墨绿", "#3c6657"]]], ["竹竿丝线", [["浅色", "#c7d3a4"], ["中色", "#89a179"], ["深色", "#526f54"]]], ["竹节丝线", [["米金", "#ddbd78"]]]]}, "butterfly": {"observe": "观察蝶翼的分区与花瓣的舒展，区分蝶身、翅脉、花叶和枝条。", "color": "蝶翼可用米金与暖橙叠染，花瓣由浅粉渐深，枝叶用绿色；每个翼区分别落笔。", "stitch": "蝶翼从翅根向外缘铺线，花瓣由花心向瓣缘展开；细小翼斑使用短针。", "parts": "蝶翼、花瓣、叶片或枝条", "groups": [["花瓣丝线", [["浅粉", "#fac8c7"], ["桃红", "#edaaa1"], ["胭脂", "#cc6e79"]]], ["蝶翼丝线", [["米金", "#edcc8e"], ["暖橙", "#eaa47d"], ["深褐", "#795d48"]]], ["枝叶丝线", [["竹青", "#629370"]]]]}, "orchid": {"observe": "观察兰叶细长的弧线、花瓣与花苞，沿花茎辨认疏密和层次。", "color": "兰叶从叶根向叶尖渐染，花瓣用米白与淡黄轻染，花心少量点金。", "stitch": "顺兰叶长弧线铺针，花瓣沿生长方向展开；花苞和花心使用较短针迹。", "parts": "兰叶、花瓣、花茎或花苞", "groups": [["兰叶丝线", [["浅绿", "#b8ceb0"], ["石绿", "#629370"], ["墨绿", "#305d4c"]]], ["兰花丝线", [["米白", "#f4ebd2"], ["淡黄", "#e8d99e"], ["嫩绿", "#a6b77f"]]], ["花心丝线", [["金色", "#e8b844"]]]]}};
+window.SHUJIN_ASSETS.patterns.forEach(p=>{if(shujinLessons[p.id]){p.lesson=shujinLessons[p.id];p.revision="20261120-outline";}});

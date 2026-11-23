@@ -1,0 +1,23 @@
+#stone-study, #stone-details {
+  --reading-width: 1200px;
+  --gutter: clamp(20px, 6vw, 100px);
+  --content: min(var(--reading-width), calc(100% - 2 * var(--gutter)));
+  --section-space: clamp(40px, 5.4vw, 82px);
+  --heading-size: clamp(28px, 3vw, 46px);
+}
+#stone-study .pc-banner { left: auto; right: 0; width: 73%; object-position: 46% 55%; }
+#stone-study::after { background: linear-gradient(90deg, #182d25 23%, #182d25ed 30%, #182d2538 57%, transparent 74%); }
+.stone-map { position: relative; width: min(100%, 185px); }
+.stone-map img { width: 100%; height: auto; }
+.stone-pin { position: absolute; left: 70%; top: 49%; transform: translate(-50%, -50%); width: 11%; aspect-ratio: 1; border: 2px solid ivory; border-radius: 50%; box-shadow: 0 0 0 2px #70472f; }
+#stone-details:has(#stone-petal:checked) .stone-pin { left: 37%; top: 50%; }
+#stone-details:has(#stone-leaf:checked) .stone-pin { left: 76%; top: 86%; }
+#stone-details:has(#stone-edge:checked) .view-edge,
+#stone-details:has(#stone-petal:checked) .view-petal,
+#stone-details:has(#stone-leaf:checked) .view-leaf { display: block; }
+.stone-workshop { width:min(100%, var(--reading-width)); margin:1.4em auto 0; text-align:right; }
+.stone-workshop a { display:inline-flex; align-items:center; gap:1em; min-height:44px; border-bottom:1px solid #ac9b77; }
+@media(max-width:680px){
+  #stone-study .pc-banner { width:100%; object-position:55% center; }
+  #stone-study::after { background:linear-gradient(90deg,#172c25ed,#172c25aa 45%,#172c2522); }
+}

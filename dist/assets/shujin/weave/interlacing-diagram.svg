@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 291" role="img" aria-label="平纹交织全貌：浅绿色经线纵向排列，米白与珊瑚色纬线横向穿行，上下交替。">
+<defs>
+  <linearGradient id="interlace-green" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#87a47c"/><stop offset=".16" stop-color="#9fb994"/><stop offset=".48" stop-color="#b2c6a2"/><stop offset=".78" stop-color="#a0b88f"/><stop offset="1" stop-color="#8aa37c"/>
+  </linearGradient>
+  <linearGradient id="interlace-ivory" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#e9d6b3"/><stop offset=".13" stop-color="#f3e5c9"/><stop offset=".5" stop-color="#faefd7"/><stop offset=".85" stop-color="#f0dfbd"/><stop offset="1" stop-color="#ddc6a0"/>
+  </linearGradient>
+  <linearGradient id="interlace-coral" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#e99476"/><stop offset=".12" stop-color="#f4b193"/><stop offset=".45" stop-color="#fac0a4"/><stop offset=".84" stop-color="#f2aa8a"/><stop offset="1" stop-color="#e58f71"/>
+  </linearGradient>
+  <pattern id="interlace-warp-fiber" width="3.2" height="8" patternUnits="userSpaceOnUse">
+    <path d="M.6 0V8" stroke="#f6f3dc" stroke-opacity=".07" stroke-width=".6"/>
+    <path d="M2.1 0V8" stroke="#627e56" stroke-opacity=".045" stroke-width=".5"/>
+  </pattern>
+  <pattern id="interlace-weft-fiber" width="8" height="3.2" patternUnits="userSpaceOnUse">
+    <path d="M0 .6H8" stroke="#fffaf0" stroke-opacity=".10" stroke-width=".6"/>
+    <path d="M0 2.1H8" stroke="#a37d53" stroke-opacity=".035" stroke-width=".5"/>
+  </pattern>
+  <filter id="interlace-shadow" x="-30%" y="-15%" width="160%" height="140%">
+    <feDropShadow dx="0" dy=".9" stdDeviation=".9" flood-color="#6b6e47" flood-opacity=".14"/>
+  </filter>
+</defs>
+<rect width="372" height="291" fill="#f7eed9"/>
+<g class="interlace-warp"><rect x="43" y="16" width="28" height="261" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="43" y="16" width="28" height="261" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="95" y="16" width="28" height="261" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="95" y="16" width="28" height="261" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="146" y="16" width="28" height="261" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="146" y="16" width="28" height="261" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="198" y="16" width="28" height="261" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="198" y="16" width="28" height="261" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="249" y="16" width="28" height="261" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="249" y="16" width="28" height="261" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="301" y="16" width="28" height="261" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="301" y="16" width="28" height="261" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-weft"><rect x="16" y="44" width="343" height="29" rx=".35" fill="url(#interlace-ivory)" filter="url(#interlace-shadow)"/><rect x="16" y="44" width="343" height="29" fill="url(#interlace-weft-fiber)"/></g>
+<g class="interlace-weft"><rect x="16" y="90" width="343" height="29" rx=".35" fill="url(#interlace-coral)" filter="url(#interlace-shadow)"/><rect x="16" y="90" width="343" height="29" fill="url(#interlace-weft-fiber)"/></g>
+<g class="interlace-weft"><rect x="16" y="136" width="343" height="29" rx=".35" fill="url(#interlace-ivory)" filter="url(#interlace-shadow)"/><rect x="16" y="136" width="343" height="29" fill="url(#interlace-weft-fiber)"/></g>
+<g class="interlace-weft"><rect x="16" y="181" width="343" height="29" rx=".35" fill="url(#interlace-coral)" filter="url(#interlace-shadow)"/><rect x="16" y="181" width="343" height="29" fill="url(#interlace-weft-fiber)"/></g>
+<g class="interlace-weft"><rect x="16" y="226" width="343" height="29" rx=".35" fill="url(#interlace-ivory)" filter="url(#interlace-shadow)"/><rect x="16" y="226" width="343" height="29" fill="url(#interlace-weft-fiber)"/></g>
+<g class="interlace-warp"><rect x="95" y="42" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="95" y="42" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="198" y="42" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="198" y="42" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="301" y="42" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="301" y="42" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="43" y="88" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="43" y="88" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="146" y="88" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="146" y="88" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="249" y="88" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="249" y="88" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="95" y="134" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="95" y="134" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="198" y="134" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="198" y="134" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="301" y="134" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="301" y="134" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="43" y="179" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="43" y="179" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="146" y="179" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="146" y="179" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="249" y="179" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="249" y="179" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="95" y="224" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="95" y="224" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="198" y="224" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="198" y="224" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+<g class="interlace-warp"><rect x="301" y="224" width="28" height="33" rx=".35" fill="url(#interlace-green)" filter="url(#interlace-shadow)"/><rect x="301" y="224" width="28" height="33" fill="url(#interlace-warp-fiber)"/></g>
+</svg>
