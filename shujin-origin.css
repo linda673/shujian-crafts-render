@@ -1,0 +1,75 @@
+:root{--paper:#f8f4eb;--ink:#39785c;--teal:#357f70;--gold:#ab8539;--rule:#a2c1b3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Songti SC","STSong","SimSun",serif}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit;cursor:pointer}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:6px}
+/* Desktop uses the reference's 16:9 canvas. All sizes follow this container. */
+.origin-page{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:2560px;aspect-ratio:16/9;margin:auto;container-type:inline-size;background:var(--paper) url("assets/maliu-pages/embroidery/intro/page-bg.webp") center/cover no-repeat}
+.top-line{position:absolute;left:5.4%;right:4.4%;top:8.9%;border-top:1px solid var(--rule)}
+main,.origin-layout{display:contents}
+.chapter-heading{position:absolute;left:9%;top:11.3%;width:78%;z-index:1}
+.chapter{display:flex;align-items:center;gap:1.5cqw;margin:0;font-size:1.3cqw;font-weight:600;line-height:1.4;letter-spacing:.09em;color:var(--teal)}
+.chapter-seal{position:relative;isolation:isolate;display:grid;place-items:center;width:1.5cqw;height:1.5cqw;font-size:1.15cqw;color:#f9dccb;flex-shrink:0;background:#efb59a;border-radius:40%}
+.chapter-seal::before,.chapter-seal::after{content:"";position:absolute;z-index:-1;inset:-20% 15%;background:#efb59a;border-radius:50%}
+.chapter-seal::after{inset:15% -20%}
+/* Total heading height: 8.285cqw. The photo starts 9.61875cqw below
+   the heading top, leaving a 1.33375cqw gap at every desktop width. */
+h1{font-size:3.5cqw;font-weight:600;line-height:1.15;letter-spacing:.04em;margin:.25cqw 0 .3cqw}
+.subtitle{font-size:1.35cqw;font-weight:500;letter-spacing:.1em;margin:0;line-height:1.4;color:var(--teal)}
+.photo-wrap{position:absolute;left:8.9%;top:28.4%;width:43.8%;height:53.1%;margin:0;isolation:isolate}
+.photo-wrap.has-photo::before{content:"";position:absolute;z-index:-1;inset:3.5% 1% -2.5% -2.5%;border:2px solid #e7d7a7}
+.weaving-photo{position:relative;width:100%;height:100%;overflow:hidden}
+.optional-photo{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.optional-photo[hidden]{display:none}
+/* Until a separate photo is supplied, show the complete photo/roll group once.
+   The source remains unchanged and scales uniformly; no 330% zoom or duplicate roll. */
+.reference-art{position:absolute;left:-10.0457%;top:0;width:110.0457%;height:114.8776%;overflow:hidden;pointer-events:none}
+.reference-art img{position:absolute;display:block;width:207.4689%;max-width:none;height:auto;left:-9.3361%;top:-46.5574%}
+.has-photo .reference-art{display:none}
+.brocade-roll{display:none;position:absolute;z-index:2;width:46%;height:auto;left:-12%;bottom:-31%;pointer-events:none}
+.has-photo .brocade-roll{display:block}
+.story-copy{position:absolute;left:60%;top:28%;width:32%;height:53.5%}
+.eyebrow{font-size:1.05cqw;line-height:1.4;letter-spacing:.13em;margin:0;color:var(--gold);white-space:nowrap}
+h2{font-weight:400}
+.story-copy h2{font-size:3.1cqw;letter-spacing:.04em;line-height:1.35;margin:1.15cqw 0 1.6cqw;color:var(--teal)}
+.intro{font-size:1.65cqw;line-height:1.5;letter-spacing:.015em;margin:0}
+.keywords{position:absolute;left:0;right:0;top:56%;display:flex;justify-content:space-between;list-style:none;margin:0;padding:0;font-size:2.35cqw}
+.keywords li{position:relative;isolation:isolate;display:grid;place-items:center;aspect-ratio:1.05;width:26%}
+.keywords li+li::before{content:"·";position:absolute;color:#dfcc95;left:-24%;top:31%}
+.keyword-shape{position:absolute;inset:0;z-index:-1;background:url("assets/shujin/origin/keyword-frame-default.svg") center/contain no-repeat}
+.keyword-shape.custom{background-image:var(--badge-image)}
+.story-button{display:inline-flex;align-items:center;justify-content:center;border:0;background:#4c796e;color:#fffaf0;padding:.7em 1.7em;font-size:1.6cqw;line-height:1.4;transition:background .2s}
+.story-copy>.story-button{position:absolute;left:0;top:85%;width:43%;min-height:11%;padding:.6em .5em;white-space:nowrap}
+.story-button:hover{background:#355e51}
+.footer{position:absolute;left:5.4%;right:4.4%;top:93%;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:20px;padding:1cqw 3.5cqw 0;font-size:1.05cqw;color:#243e30;line-height:1.8}
+.footer div{display:flex;gap:1.8em;flex-wrap:wrap}
+.footer button{border:0;background:none;color:inherit;padding:0}
+.footer a:hover,.footer button:hover{text-decoration:underline}
+dialog{width:min(680px,90vw);max-height:85vh;overflow:auto;background:var(--paper);border:1px solid var(--gold);color:var(--ink);padding:38px;line-height:1.9}
+dialog::backdrop{background:#173b2b70}
+dialog h2{font-size:28px;line-height:1.5}
+dialog h3{margin-bottom:0}
+dialog p{margin-top:.5em}
+dialog .story-button{font-size:18px;margin-top:16px}
+.close{float:right;font-size:30px;border:0;background:none;color:inherit;line-height:1}
+.dialog-label{color:var(--gold)}
+/* On narrow screens let content grow naturally; the background never stretches. */
+@media(max-width:900px){
+ .origin-page{aspect-ratio:auto;min-height:100svh;padding:28px 6% 24px;background-size:auto 850px;background-position:center top;background-repeat:no-repeat}
+ .top-line{position:static;margin-bottom:25px}
+ .chapter-heading{position:relative;left:auto;top:auto;width:auto}
+ .chapter{gap:18px;font-size:18px;margin-bottom:14px}.chapter-seal{width:23px;height:23px;font-size:17px}
+ h1{font-size:clamp(28px,6.1vw,48px);margin:0 0 10px;letter-spacing:.02em}
+ .subtitle{font-size:clamp(15px,3.4vw,22px);letter-spacing:.04em;margin-bottom:28px}
+ .photo-wrap{position:relative;left:auto;top:auto;width:92%;height:auto;aspect-ratio:1.4664;margin:0 0 15% 6%}
+ .story-copy{position:relative;left:auto;top:auto;width:auto;height:auto;margin:0 0 36px}
+ .eyebrow{font-size:12px;letter-spacing:.09em}
+ .story-copy h2{font-size:32px;margin:18px 0}.intro{font-size:18px;line-height:1.8}
+ .keywords{position:static;max-width:480px;margin:25px 0;font-size:clamp(23px,5.6vw,34px)}
+ .story-copy>.story-button{position:static;min-height:48px;width:auto;padding:12px 28px;font-size:19px}
+ .footer{position:static;flex-wrap:wrap;padding:18px 0 0;font-size:14px;gap:10px}
+ dialog{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}

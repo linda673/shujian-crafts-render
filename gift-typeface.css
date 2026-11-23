@@ -1,0 +1,9 @@
+/* Shared typeface from nianhua-intro.css. Override only font-family. */
+:root,
+:root *,
+:root::before,
+:root::after,
+:root *::before,
+:root *::after {
+  font-family: "STZhongsong", "华文中宋", serif !important;
+}

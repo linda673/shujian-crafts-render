@@ -1,0 +1,121 @@
+/* Match stone-carving-origin typography. Viewport sizes follow its 2560px cap. */
+
+body {
+  font-family: "Songti SC","STSong","SimSun",serif;
+}
+
+.paper-origin .chapter {
+  font-size: min(1.3vw, 33.28px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .09em;
+}
+
+.paper-origin .chapter-seal {
+  font-size: min(1.1vw, 28.16px);
+}
+
+.paper-origin .chapter-heading h1 {
+  font-size: min(3.5vw, 89.6px);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: .025em;
+}
+
+.paper-origin .subtitle {
+  font-size: min(1.35vw, 34.56px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: .1em;
+}
+
+.paper-origin .eyebrow {
+  font-size: min(1.05vw, 26.88px);
+  line-height: 1.4;
+  letter-spacing: .1em;
+}
+
+.paper-origin .story-copy h2 {
+  font-size: min(2.65vw, 67.84px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .02em;
+}
+
+.paper-origin .intro {
+  font-size: min(1.65vw, 42.24px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .015em;
+}
+
+.paper-origin .keywords li {
+  font-size: min(2vw, 51.2px);
+  font-weight: 600;
+}
+
+.paper-origin .story-button {
+  font-size: min(1.45vw, 37.12px);
+  line-height: 1.5;
+}
+
+.paper-origin .origin-footer {
+  font-size: min(1.05vw, 26.88px);
+  line-height: 1.8;
+}
+
+/* Let the existing keyword frames accommodate the reference font size. */
+.paper-origin .keywords li {
+  min-width: 3em;
+}
+
+/* History, study, meanings and ending already share the reference stylesheets. */
+@media (max-width: 900px) {
+
+  .paper-origin .chapter {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .paper-origin .chapter-seal {
+    font-size: 17px;
+  }
+
+  .paper-origin .chapter-heading h1 {
+    font-size: clamp(28px,5.8vw,46px);
+    line-height: 1.35;
+    letter-spacing: .015em;
+  }
+
+  .paper-origin .subtitle {
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: .04em;
+  }
+
+  .paper-origin .eyebrow {
+    font-size: 13px;
+  }
+
+  .paper-origin .story-copy h2 {
+    font-size: clamp(26px,4.8vw,36px);
+    line-height: 1.4;
+  }
+
+  .paper-origin .intro {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .paper-origin .keywords li {
+    font-size: clamp(24px,5vw,34px);
+  }
+
+  .paper-origin .story-button {
+    font-size: 19px;
+  }
+
+  .paper-origin .origin-footer {
+    font-size: 14px;
+  }
+}

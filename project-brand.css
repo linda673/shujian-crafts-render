@@ -1,0 +1,67 @@
+/* One supplied wordmark and decoration composition for all site headers. */
+:root body > .shared-site-brand {
+  --site-brand-width: clamp(245px, 23vw, 560px);
+  position: absolute;
+  z-index: 31;
+  top: clamp(24px, 2.2vw, 56px);
+  left: max(3.5vw, calc((100vw - 2560px) / 2 + 89.6px));
+  display: block;
+  width: var(--site-brand-width);
+  height: calc(var(--site-brand-width) * .30);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+}
+:root .shared-site-brand .shared-brand-sun {
+  position: absolute;
+  left: 13%; top: 12%;
+  width: 23.2%; aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(155deg, #f4bca6, #f5dfca);
+}
+:root .shared-site-brand .shared-brand-wordmark {
+  position: absolute;
+  left: 15%; top: 21%;
+  width: 85%; height: 79%;
+  max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0;
+  object-fit: contain;
+  mix-blend-mode: normal;
+  opacity: 1;
+  filter: url(#shared-brand-solid-ink);
+  z-index: 1;
+}
+:root .shared-site-brand .shared-brand-cloud {
+  position: absolute;
+  left: 0; top: 34%;
+  width: 32%; height: 65%;
+  clip-path: inset(0 24% 0 0);
+  z-index: 2;
+  max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0;
+  object-fit: contain;
+}
+:root .shared-site-brand:focus-visible { outline: 2px solid #548e72; outline-offset: 6px; border-radius: 5px; }
+/* Keep old loader targets, but show only the shared brand. */
+:root header > :is(.brand, .home-brand) { visibility: hidden !important; pointer-events: none; }
+/* The year-painting introduction contains a baked-in brand in its poster. */
+:root .poster-content::before {
+  content: "";
+  position: absolute; z-index: 5;
+  left: 0; top: 0; width: 27%; height: 18%;
+  background: #f8f5ec url('assets/maliu-pages/embroidery/intro/page-bg.webp') left top / 400% 700% no-repeat;
+  pointer-events: none;
+}
+:root .poster-content .home { visibility: hidden !important; pointer-events: none; }
+@media (max-width: 760px) {
+  :root body > .shared-site-brand {
+    --site-brand-width: 245px;
+    top: 146px;
+    left: calc((100vw - var(--site-brand-width)) / 2);
+  }
+  :root .home-header { padding-top: 128px; }
+}
+
+.shared-brand-filter { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }

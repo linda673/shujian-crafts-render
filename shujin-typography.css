@@ -1,0 +1,137 @@
+/* Typography follows the corresponding sections of stone-carving-origin. */
+
+body {
+  font-family: "Songti SC","STSong","SimSun",serif;
+}
+
+.origin-page .chapter-heading h1 {
+  font-size: 3.5cqw;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: .025em;
+}
+
+.origin-page .chapter-seal {
+  font-size: 1.1cqw;
+}
+
+.origin-page .eyebrow {
+  font-size: 1.05cqw;
+  line-height: 1.4;
+  letter-spacing: .1em;
+}
+
+.origin-page .story-copy h2 {
+  font-size: 2.65cqw;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .02em;
+}
+
+.origin-page .intro {
+  font-size: 1.65cqw;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .015em;
+}
+
+.origin-page .keywords li {
+  font-size: 2cqw;
+  font-weight: 600;
+}
+
+.origin-page .story-button {
+  font-size: 1.45cqw;
+  line-height: 1.5;
+}
+
+dialog {
+  line-height: 1.8;
+}
+
+dialog h2 {
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+dialog h3 {
+  font-size: 20px;
+}
+
+/* Both pages already share the banner, timeline labels and ending typography. */
+.silk-study {
+  --heading-size: clamp(28px, 3vw, 46px);
+}
+
+.silk-study h2 {
+  font-size: var(--heading-size);
+}
+
+.study-reading h3 {
+  line-height: normal;
+}
+
+.study-reading p {
+  font-size: clamp(16px, 1.15vw, 18px);
+}
+
+#shujin-history {
+  --copy-size: clamp(17px, 1.24vw, 20px);
+  --heading-size: clamp(28px, 3vw, 46px);
+}
+
+#shujin-history h2,
+#shujin-history .history-view label {
+  line-height: normal;
+}
+
+#shujin-history .history-text h3 {
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+
+  .origin-page .chapter {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .origin-page .chapter-seal {
+    font-size: 17px;
+  }
+
+  .origin-page .chapter-heading h1 {
+    font-size: clamp(28px,5.8vw,46px);
+    line-height: 1.35;
+    letter-spacing: .015em;
+  }
+
+  .origin-page .subtitle {
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: .04em;
+  }
+
+  .origin-page .eyebrow {
+    font-size: 13px;
+  }
+
+  .origin-page .story-copy h2 {
+    font-size: clamp(26px,4.8vw,36px);
+    line-height: 1.4;
+  }
+
+  .origin-page .intro {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .origin-page .keywords li {
+    font-size: clamp(24px,5vw,34px);
+  }
+
+  .origin-page .story-copy > .story-button {
+    font-size: 19px;
+  }
+}

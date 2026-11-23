@@ -1,0 +1,109 @@
+/* 第二屏下方的经纬交织内容行。类名独立，避免影响原页面。 */
+.interlace-section {
+  width: 100%;
+  max-width: 2560px;
+  margin: 0 auto;
+  padding: 38px 5.4% 42px;
+  color: #24554c;
+  background: #f6f3e8;
+  scroll-margin-top: 20px;
+}
+.interlace-inner {
+  display: grid;
+  grid-template-columns: 1.13fr .94fr 1.15fr;
+  align-items: center;
+  gap: clamp(24px, 2.6vw, 56px);
+  padding: 30px 0;
+  border-top: 1px solid #d4dbc9;
+  border-bottom: 1px solid #d4dbc9;
+}
+.interlace-intro, .interlace-explanation { min-width: 0; }
+.interlace-kicker {
+  margin: 0 0 21px;
+  color: #a3854e;
+  font: 11px/1.5 Arial, sans-serif;
+  letter-spacing: .24em;
+}
+.interlace-title {
+  margin: 0 0 18px;
+  font-size: clamp(26px, 2.15vw, 43px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: .04em;
+}
+.interlace-description {
+  margin: 0;
+  color: #697b6a;
+  font-size: clamp(15px, 1.03vw, 20px);
+  line-height: 1.9;
+}
+.interlace-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 27px;
+}
+.interlace-controls button {
+  min-height: 44px;
+  border: 1px solid #ccd5c3;
+  border-radius: 2px;
+  padding: 11px 17px;
+  color: #62765d;
+  background: transparent;
+  font: inherit;
+  font-size: clamp(14px, .95vw, 18px);
+  line-height: 1.45;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.interlace-controls button:hover { border-color: #638776; background: #e8ecdf; }
+.interlace-controls button[aria-pressed="true"] { color: #fffdf4; background: #265747; border-color: #265747; }
+.interlace-controls button:focus-visible { outline: 3px solid #b27b4e; outline-offset: 4px; }
+.interlace-figure {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 270px;
+  margin: 0;
+  padding: 10px clamp(14px, 1.7vw, 36px);
+  border-left: 1px solid #d6ddca;
+  border-right: 1px solid #d6ddca;
+}
+.interlace-figure svg { display: block; width: 100%; max-width: 372px; height: auto; overflow: visible; }
+.interlace-warp, .interlace-weft { transition: opacity .28s ease; }
+.interlace-section[data-view="warp"] .interlace-weft { opacity: .09; }
+.interlace-section[data-view="weft"] .interlace-warp { opacity: .09; }
+.interlace-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; margin-bottom: 24px; }
+.interlace-legend span { display: inline-flex; align-items: center; gap: 10px; font-size: clamp(14px, 1vw, 19px); }
+.interlace-swatch { display: inline-block; width: 10px; height: 10px; background: #87a580; }
+.interlace-swatch--weft { background: #e6a185; }
+.interlace-mode-title { margin: 0 0 17px; font-size: clamp(23px, 1.7vw, 33px); line-height: 1.45; font-weight: 400; }
+.interlace-mode-body { min-height: 3.8em; margin: 0; font-size: clamp(15px, 1.03vw, 20px); line-height: 1.9; color: #697b6a; }
+.interlace-step { display: flex; align-items: center; gap: 17px; margin: 28px 0 0; color: #7d896e; font-size: 12px; line-height: 1.6; letter-spacing: .16em; }
+.interlace-step::before { content: ""; width: 44px; height: 1px; background: #cbd4be; flex-shrink: 0; }
+@media (max-width: 1100px) {
+  .interlace-inner { grid-template-columns: 1fr 1fr; gap: 27px; }
+  .interlace-intro { grid-column: 1 / -1; }
+  .interlace-title { font-size: 31px; }
+  .interlace-description { font-size: 17px; }
+  .interlace-controls { margin-top: 20px; }
+  .interlace-figure { border-left: 0; min-height: 230px; padding-left: 0; }
+}
+@media (max-width: 560px) {
+  .interlace-section { padding: 15px 7% 35px; }
+  .interlace-inner { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 26px 0; }
+  .interlace-title { font-size: 27px; letter-spacing: .01em; }
+  .interlace-kicker { font-size: 10px; margin-bottom: 16px; }
+  .interlace-description { font-size: 16px; }
+  .interlace-controls { gap: 7px; }
+  .interlace-controls button { flex: 1; padding: 10px 8px; font-size: 14px; white-space: nowrap; }
+  .interlace-figure { min-height: 0; padding: 7px 8px; border: 0; }
+  .interlace-figure svg { max-width: 350px; }
+  .interlace-explanation { padding-top: 22px; border-top: 1px solid #d6ddca; }
+  .interlace-legend { margin-bottom: 18px; gap: 22px; }
+  .interlace-mode-body { min-height: 0; font-size: 16px; }
+  .interlace-step { margin-top: 20px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .interlace-warp, .interlace-weft, .interlace-controls button { transition: none; }
+}

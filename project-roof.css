@@ -1,0 +1,37 @@
+/* Identical header ornament at identical viewport widths. */
+:root body > .shared-site-roof {
+  position: absolute;
+  z-index: 29;
+  left: 50vw;
+  top: clamp(22px, 1.6vw, 41px);
+  width: min(44vw, 1120px);
+  height: auto;
+  aspect-ratio: 3780 / 552;
+  max-width: none;
+  max-height: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  object-fit: contain;
+  transform: translateX(-50%);
+  opacity: 1;
+  filter: none;
+  pointer-events: none;
+  user-select: none;
+}
+/* Retain legacy loader nodes and header spacing without drawing a second roof. */
+:root header > .roof { visibility: hidden !important; pointer-events: none; }
+:root .poster-content > .shared-roof-poster-mask {
+  position: absolute;
+  z-index: 6;
+  left: 25%; top: 2%; width: 50%; height: 12%;
+  background: #f8f5ec url('assets/maliu-pages/embroidery/intro/page-bg.webp') center top / 200% 800% no-repeat;
+  pointer-events: none;
+}
+:root .poster-content > span.poster-header { visibility: hidden !important; }
+/* Compact headers use the same rule on every page, leaving room for navigation. */
+@media (max-width: 1000px) {
+  :root body > .shared-site-roof { display: none; }
+}

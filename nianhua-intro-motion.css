@@ -1,0 +1,66 @@
+/* The same darker hover treatment applies to all three story cards. */
+@media (hover: hover) and (pointer: fine) {
+  .nianhua-intro .story-card:hover {
+    filter: brightness(.93) saturate(1.05) drop-shadow(0 6px 5px #394a3420);
+  }
+}
+
+/* Motion adapted from shujin-intro, scoped to the year-print introduction. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes nianhua-rise {
+    from { opacity:0; translate:0 18px; }
+    to { opacity:1; translate:0 0; }
+  }
+  @keyframes nianhua-unfurl {
+    from { opacity:0; clip-path:inset(0 85% 0 0); transform:translateX(-12px) scaleX(.96); }
+    40% { opacity:1; }
+    to { opacity:1; clip-path:inset(0); transform:none; }
+  }
+  @keyframes nianhua-draw-line {
+    from { transform:scaleX(0); }
+    to { transform:scaleX(1); }
+  }
+  .nianhua-intro .hero h1,
+  .nianhua-intro .hero h1 span,
+  .nianhua-intro .hero-description {
+    animation:nianhua-rise .65s cubic-bezier(.2,.75,.25,1) backwards;
+  }
+  .nianhua-intro .hero h1 { animation-delay:.08s; }
+  .nianhua-intro .hero h1 span { display:inline-block; animation-delay:.23s; }
+  .nianhua-intro .hero-description { animation-delay:.32s; }
+  :root .nianhua-intro .hero-copy > .topic-tags > li {
+    animation:nianhua-rise .65s cubic-bezier(.2,.75,.25,1) .4s backwards;
+  }
+  :root .nianhua-intro .hero-copy > .topic-tags > li:nth-child(2) { animation-delay:.46s; }
+  :root .nianhua-intro .hero-copy > .topic-tags > li:nth-child(3) { animation-delay:.52s; }
+  .nianhua-intro .hero-illustration {
+    transform-origin:left center;
+    animation:nianhua-unfurl 1.15s cubic-bezier(.18,.76,.22,1) .14s backwards;
+  }
+  .nianhua-intro .section-heading.in-view .heading-line {
+    transform-origin:left;
+    animation:nianhua-draw-line .85s ease-out backwards;
+  }
+  .nianhua-intro .story-card.in-view {
+    animation:nianhua-rise .68s cubic-bezier(.16,.8,.28,1) var(--card-delay,0s) backwards;
+  }
+  .nianhua-intro .story-card:nth-child(2) { --card-delay:.1s; }
+  .nianhua-intro .story-card:nth-child(3) { --card-delay:.2s; }
+  .nianhua-intro .story-card, .nianhua-intro .card-art {
+    transition:transform .32s cubic-bezier(.2,.7,.2,1),filter .32s ease-out;
+  }
+  .nianhua-intro .card-art { --tilt:-3deg; }
+  .nianhua-intro .art-craft { --tilt:2deg; }
+  .nianhua-intro .story-card:focus-visible .card-art {
+    transform:translateY(-50%) rotate(var(--tilt)) scale(1.035);
+  }
+  @media (hover:hover) and (pointer:fine) {
+    .nianhua-intro .story-card:hover { transform:translateY(-6px); }
+    .nianhua-intro .story-card:hover .card-art { transform:translateY(-50%) rotate(var(--tilt)) scale(1.035); }
+  }
+  .nianhua-intro dialog[open] { animation:nianhua-rise .26s ease-out; }
+  @container (max-width:820px) { .nianhua-intro .story-card.in-view { --card-delay:0s; } }
+}
+@media (prefers-reduced-motion:reduce) {
+  .nianhua-intro .story-card:hover { transform:none; }
+}

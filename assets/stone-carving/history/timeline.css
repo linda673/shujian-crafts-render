@@ -1,0 +1,18 @@
+#stone-history {
+  --paper: #f8f4eb;
+  --copy-size: clamp(17px, 1.24vw, 20px);
+  --heading-size: clamp(28px, 3vw, 46px);
+  --reading-width: 1200px;
+  color: #315b49;
+  background: var(--paper);
+  padding: clamp(40px, 5.4vw, 82px) clamp(20px, 6vw, 100px);
+}
+#stone-history a { color: inherit; }
+#stone-history a:hover { color: #903e2f; }
+#stone-history .history-image img { object-fit: cover; }
+#stone-era-2008:checked ~ #stone-leaf-2008,
+#stone-era-2015:checked ~ #stone-leaf-2015,
+#stone-era-2019:checked ~ #stone-leaf-2019,
+#stone-era-2021:checked ~ #stone-leaf-2021,
+#stone-era-2023:checked ~ #stone-leaf-2023,
+#stone-era-2024:checked ~ #stone-leaf-2024 { display: grid; }

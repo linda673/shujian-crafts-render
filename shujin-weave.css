@@ -1,0 +1,199 @@
+/* 追加在 shujin-origin.css 后；所有新增组件使用独立类名。 */
+html { scroll-behavior: smooth; }
+body { overflow-x: clip; }
+
+/* 第一屏的向下入口；滚轮和触摸滑动不依赖此按钮。 */
+.shujin-scroll-next {
+  position: absolute;
+  left: 60%;
+  top: 87%;
+  color: #39785c;
+  font-size: 1.05cqw;
+  line-height: 1.6;
+  letter-spacing: .08em;
+}
+.shujin-scroll-next:hover { text-decoration: underline; }
+
+.shujin-weave-page {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 2560px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  overflow: hidden;
+  container-type: inline-size;
+  color: #39785c;
+  background: #f8f4eb url("assets/maliu-pages/embroidery/intro/page-bg.webp") center / cover no-repeat;
+  scroll-margin-top: 0;
+}
+.shujin-weave-title {
+  position: absolute;
+  z-index: 2;
+  left: 8.9%;
+  top: 14.8%;
+  width: 34%;
+  margin: 0;
+  font-size: 3.5cqw;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: .025em;
+}
+.shujin-weave-copy {
+  position: absolute;
+  z-index: 2;
+  left: 10%;
+  top: 37.5%;
+  width: 29%;
+}
+.shujin-weave-subtitle {
+  margin: 0 0 2.3cqw;
+  color: #357f70;
+  font-size: 2.5cqw;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.shujin-weave-description {
+  margin: 0;
+  font-size: 1.65cqw;
+  line-height: 1.5;
+  letter-spacing: .015em;
+}
+.shujin-weave-legend {
+  display: grid;
+  gap: 1.35cqw;
+  margin: 2.5cqw 0 0;
+  padding: 0;
+  list-style: none;
+}
+.shujin-weave-legend li {
+  display: flex;
+  align-items: center;
+  gap: 1.1cqw;
+}
+.shujin-weave-line-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 2.7cqw;
+  height: 2.7cqw;
+}
+.shujin-weave-line-icon--warp {
+  background: repeating-linear-gradient(90deg, #b7d1b0 0 .18cqw, transparent .18cqw .73cqw);
+}
+.shujin-weave-line-icon--weft {
+  background: repeating-linear-gradient(0deg, #e9a78d 0 .18cqw, transparent .18cqw .73cqw);
+}
+.shujin-weave-label {
+  display: inline-block;
+  min-width: 11.5cqw;
+  padding: .55cqw 1.35cqw;
+  border-radius: .7cqw;
+  background: #d9e8d0;
+  color: #467a5e;
+  font-size: 1.25cqw;
+  line-height: 1.4;
+  text-align: center;
+}
+.shujin-weave-label--weft { background: #f5c8b6; color: #a94f32; }
+.shujin-weave-flower {
+  position: absolute;
+  z-index: 1;
+  right: 1.4%;
+  top: 18.2%;
+  width: 49%;
+  height: 69%;
+  object-fit: contain;
+  object-position: right center;
+  pointer-events: none;
+}
+.shujin-weave-card {
+  position: absolute;
+  z-index: 3;
+  left: 41%;
+  top: 65.2%;
+  width: 16.6%;
+  height: 25.5%;
+  margin: 0;
+}
+.shujin-weave-card img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.shujin-weave-text-art { display: block; width: 100%; height: auto; }
+.shujin-weave-subtitle .shujin-weave-text-art { width: 78%; }
+.shujin-weave-text-art[hidden] { display: none; }
+/* 只有可选文字图片成功加载后，才隐藏相应的普通文字。 */
+.shujin-weave-image-heading.is-ready > span { display: none; }
+
+@media (max-width: 900px) {
+  .shujin-scroll-next {
+    position: static;
+    display: block;
+    margin: 18px 0 0;
+    font-size: 15px;
+    text-align: center;
+  }
+  .shujin-weave-page {
+    aspect-ratio: auto;
+    min-height: 100svh;
+    padding: 48px 7% 55px;
+    background-size: auto 100%;
+  }
+  .shujin-weave-title {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    font-size: clamp(28px, 5.4vw, 46px);
+    margin-bottom: 40px;
+  }
+  .shujin-weave-copy { position: relative; left: auto; top: auto; width: 100%; }
+  .shujin-weave-subtitle { font-size: clamp(23px, 4.8vw, 34px); margin-bottom: 23px; }
+  .shujin-weave-subtitle .shujin-weave-text-art { width: min(100%, 520px); }
+  .shujin-weave-description { font-size: 18px; line-height: 1.85; max-width: 620px; }
+  .shujin-weave-legend { gap: 14px; margin-top: 26px; }
+  .shujin-weave-legend li { gap: 16px; }
+  .shujin-weave-line-icon { width: 31px; height: 31px; }
+  .shujin-weave-line-icon--warp { background-size: 9px 100%; background-image: linear-gradient(90deg, #b7d1b0 0 3px, transparent 3px); }
+  .shujin-weave-line-icon--weft { background-size: 100% 9px; background-image: linear-gradient(0deg, #e9a78d 0 3px, transparent 3px); }
+  .shujin-weave-label { min-width: 166px; padding: 8px 16px; border-radius: 9px; font-size: 17px; }
+  .shujin-weave-flower { position: relative; right: auto; top: auto; width: 100%; height: auto; margin-top: 38px; }
+  .shujin-weave-card { position: relative; left: auto; top: auto; width: 38%; height: auto; margin: -17% 0 0 0; }
+  .shujin-weave-card img { height: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* 分层原图尚未提供：用 CSS 窗口显示参考图的插画与卡片区域。
+   文字仍为上面的真实 HTML，reference-layout.png 保持原文件不变。 */
+.shujin-weave-reference-art {
+  position: absolute;
+  z-index: 1;
+  left: 40.8%;
+  top: 18%;
+  width: 59.2%;
+  height: 74%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.shujin-weave-reference-art img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  width: 168.918919%;
+  height: auto;
+  left: -68.918919%;
+  top: -24.324324%;
+}
+.shujin-weave-reference-art[hidden] { display: none; }
+.is-reference .shujin-weave-flower,
+.is-reference .shujin-weave-card { display: none; }
+@media (max-width: 900px) {
+  .shujin-weave-reference-art {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.42222222;
+    margin-top: 30px;
+  }
+}

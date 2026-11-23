@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs>
+ <linearGradient id="paper" x2=".3" y2="1"><stop stop-color="#d1e6dc" stop-opacity=".85"/><stop offset="1" stop-color="#faf6e9" stop-opacity=".7"/></linearGradient>
+ <path id="frame" d="M60 35C65 0 135 0 140 35C170 33 197 63 190 100C197 137 170 167 140 165C135 200 65 200 60 165C30 167 3 137 10 100C3 63 30 33 60 35Z"/>
+</defs>
+<use href="#frame" fill="url(#paper)" stroke="#dfcc95" stroke-width="1"/>
+<use href="#frame" transform="translate(5 5) scale(.95)" fill="none" stroke="#dfcc95" stroke-width=".8"/>
+</svg>

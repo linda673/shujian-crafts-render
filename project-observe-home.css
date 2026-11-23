@@ -1,0 +1,13 @@
+/* Placement only. All visible dimensions and decoration live in project-home-button.css. */
+body > a.observe-home-link {
+  position: fixed;
+  right: max(22px, env(safe-area-inset-right));
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 50;
+}
+@media (max-width:620px) {
+  body > a.observe-home-link {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}

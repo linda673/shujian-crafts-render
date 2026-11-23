@@ -1,0 +1,19 @@
+#shujin-history {
+  --paper: #f7f4ec;
+  --reading-width: 1440px;
+  --copy-size: clamp(16px, 1.15vw, 19px);
+  --heading-size: clamp(32px, 3vw, 52px);
+  padding: clamp(30px, 4vw, 64px) 5.4% clamp(42px, 5vw, 82px);
+  background: var(--paper);
+  color: #315b49;
+}
+#shujin-history h2, #shujin-history .history-text h3 { margin: 0; line-height: 1.35; }
+#shujin-history .history-period { margin-bottom: 0; }
+#shujin-history .history-view label { line-height: 1.5; }
+#shujin-history .history-image img { display: block; object-fit: cover; }
+#js-era-2006:checked ~ #js-leaf-2006,
+#js-era-2009:checked ~ #js-leaf-2009,
+#js-era-2013:checked ~ #js-leaf-2013,
+#js-era-2014:checked ~ #js-leaf-2014,
+#js-era-2016:checked ~ #js-leaf-2016,
+#js-era-2018:checked ~ #js-leaf-2018 { display: grid; }

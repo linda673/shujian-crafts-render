@@ -1,0 +1,51 @@
+/* Keep image dimensions in step with stone-carving-origin. */
+.nianhua-origin {
+  min-height: 100svh;
+}
+
+.nianhua-origin .book-decoration {
+  left: -11%;
+  bottom: -13%;
+  width: 34%;
+  height: auto;
+}
+
+#color-study {
+  --reading-width: 1200px;
+  --gutter: clamp(20px, 6vw, 100px);
+  --content: min(var(--reading-width), calc(100% - 2 * var(--gutter)));
+}
+
+#color-study .pc-banner {
+  left: auto;
+  right: 0;
+  width: 73%;
+  object-position: 46% 55%;
+}
+
+#color-study::after {
+  background: linear-gradient(90deg, #182d25 23%, #182d25ed 30%, #182d2538 57%, transparent 74%);
+}
+
+#print-details .print-map {
+  width: min(100%, 185px);
+}
+
+@media (max-width: 900px) {
+  .nianhua-origin .book-decoration {
+    left: -10%;
+    bottom: -12%;
+    width: 32%;
+  }
+}
+
+@media (max-width: 680px) {
+  #color-study .pc-banner {
+    width: 100%;
+    object-position: 55% center;
+  }
+
+  #color-study::after {
+    background: linear-gradient(90deg, #172c25ed, #172c25aa 45%, #172c2522);
+  }
+}
